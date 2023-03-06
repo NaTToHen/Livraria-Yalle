@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Poppins&family=Roboto&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
 
 * {
    font-family: 'Rubik', sans-serif;
@@ -112,6 +114,13 @@ li a {
    height: 470px;
 }
 
+.slide2 {
+   margin-top: 570px;
+   background-color: #F5F5F5;
+   width: 100%;
+   height: 470px;
+}
+
 main {
    position: relative;
 }
@@ -128,6 +137,7 @@ main {
    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
    grid-template-rows: auto;
    grid-gap: 20px;
+   row-gap: 90px;
    margin-top: 35px;
    width: 90%;
    margin: auto;
@@ -135,14 +145,15 @@ main {
 }
 
 .card {
+   cursor: pointer;
    position: relative;
-   margin: auto;
    width: 280px;
    height: 400px;
    background-color: #F5F5F5;
 }
 
 .card:hover {
+   transition: .3s;
    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -162,8 +173,9 @@ main {
 }
 
 #preco {
+   font-family: 'Kurale', serif;
    color: #FF5050;
-   font-size: 60px;
+   font-size: 55px;
    margin-right: 15px;
    float: right;
 }
