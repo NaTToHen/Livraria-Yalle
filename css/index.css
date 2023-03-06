@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Poppins&family=Roboto&family=Rubik&display=swap');
+
+* {
+   font-family: 'Rubik', sans-serif;
+   margin: 0;
+}
+
+header {
+   width: 100%;
+   height: 10vh;
+}
+
+#navBar {
+   height: 10vh;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 75vw;
+   margin: auto;
+}
+
+.logo {
+   float: left;
+}
+
+#navBar ul li {
+   display: inline;
+   list-style: none;
+}
+
+#cadastrarNav {
+   padding: 15px;
+   list-style: none;
+   text-decoration: none;
+   float: right;
+   color: black;
+}
+
+#loginNav a {
+   color: white;
+}
+
+#navBar ul li a {
+   font-size: 20px;
+   text-decoration: none;
+}
+
+#loginNav {
+   background-color: #FF5050;
+   padding: 15px;
+   list-style: none;
+   text-decoration: none;
+   float: right;
+}
+
+#loginNav a {
+   text-decoration: none;
+   font-size: 20px;
+}
+
+.pesquisa {
+   display: flex;
+}
+
+#txPesquisa {
+   width: 350px;
+   height: 34px;
+   padding: 5px;
+   outline: 0;
+   border: solid 1px #000000;
+   margin-right: 5px;
+}
+
+.menuLista img{
+   margin-left: 5px;
+}
+
+hr {
+   margin-top: 8px;
+   margin-bottom: 8px;
+   background-color: #FF5050;
+}
+
+#secLinks {
+   margin: auto;
+   width: 40%;
+   height: 50px;
+}
+
+ul {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+li {
+   list-style: none;
+}
+
+li a {
+   text-decoration: none;
+   color: black;
+}
+
+/* Conteudo */
+
+
+.slides {
+   margin-top: -18px;
+   background-color: #F5F5F5;
+   width: 100%;
+   height: 470px;
+}
+
+main {
+   position: relative;
+}
+
+#destaques h1{
+   font-size: 25px;
+   text-align: center;
+   margin-top: 35px;
+   margin-bottom: 35px;
+}
+
+#cards {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+   grid-template-rows: auto;
+   grid-gap: 20px;
+   margin-top: 35px;
+   width: 90%;
+   margin: auto;
+   height: 400px;
+}
+
+.card {
+   position: relative;
+   margin: auto;
+   width: 280px;
+   height: 400px;
+   background-color: #F5F5F5;
+}
+
+.card:hover {
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+}
+
+.conteudoCard img {
+   margin-top: 10px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.conteudoCard h2, p {
+   text-align: center;
+}
+
+.conteudoCard p {
+   color: #989898;
+}
+
+#preco {
+   color: #FF5050;
+   font-size: 60px;
+   margin-right: 15px;
+   float: right;
+}
+
+.conteudoCard button {
+   height: 40px;
+}
+
+.botoes {
+   cursor: pointer;
+   background-color: aquamarine;
+   display: flex;
+   width: 100%;
+}
+
+#btnComprar {
+   cursor: pointer;
+   width: 82%;
+   font-size: 20px;
+   background-color: #000000;
+   color:#F5F5F5;
+}
+
+#btnCarinhoAdd {
+   cursor: pointer;
+   width: 18%;
+   background-color: white;
+   border: none;
+}
+
+#btnCarinhoAdd img{
+   margin: auto;
+}
+
+/*
+.conteudoCard img {
+   margin-top: 10px;
+   position: absolute;
+   left: 55%;
+}
+
+.conteudoCard h2 {
+   position: absolute;
+   top: 240px;
+   left: 100%;
+}
+
+.conteudoCard p {
+   color: #8f8f8f;
+   position: absolute;
+   top: 265px;
+   margin-left: 50%;
+}
+*/
