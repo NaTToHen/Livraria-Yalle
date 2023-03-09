@@ -34,6 +34,7 @@ header {
    text-decoration: none;
    float: right;
    color: black;
+   border-radius: 7px;
 }
 
 #loginNav a {
@@ -51,6 +52,7 @@ header {
    list-style: none;
    text-decoration: none;
    float: right;
+   border-radius: 7px;
 }
 
 #loginNav a {
@@ -66,9 +68,10 @@ header {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   background-color: #F5F5F5;
+   background-color: #dfdfdf;
    width: 450px;
    height: 400px;
+   border-radius: 7px;
    
 }
 
@@ -94,6 +97,7 @@ input {
    height: 45px;
    border: 0;
    padding-left: 8px;
+   border-radius: 7px;
 }
 
 button {
@@ -104,6 +108,7 @@ button {
    height: 55px;
    width: 82%;
    font-size: 25px;
+   border-radius: 7px;
 }
 
 .linksMenu {
