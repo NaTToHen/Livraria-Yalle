@@ -138,12 +138,12 @@ main {
 
 #cards {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
    grid-template-rows: auto;
    grid-gap: 20px;
    row-gap: 90px;
    margin-top: 35px;
-   width: 90%;
+   width: 60%;
    margin: auto;
    height: 400px;
 }
@@ -211,6 +211,7 @@ main {
    font-size: 20px;
    background-color: #FF5050;
    color:#000000;
+   outline: none;
    transition: 0.3s all;
 }
 
