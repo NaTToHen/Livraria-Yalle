@@ -167,7 +167,6 @@ main {
    display: block;
    margin-left: auto;
    margin-right: auto;
-   border-radius: 7px;
 }
 
 .conteudoCard h2, p {
@@ -203,16 +202,6 @@ main {
    font-size: 20px;
    background-color: #000000;
    color:#F5F5F5;
-   border-radius: 7px;
-}
-
-#btnComprar:hover {
-   cursor: pointer;
-   font-size: 20px;
-   background-color: #FF5050;
-   color:#000000;
-   outline: none;
-   transition: 0.3s all;
 }
 
 #btnComprar:not(hover) {
