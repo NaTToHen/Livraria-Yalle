@@ -118,6 +118,13 @@ li a {
    height: 470px;
 }
 
+.fundoT {
+   position: relative;
+   background-image: url(../img/fundoDestaque.png);
+   width: 100%;
+   height: 60px;
+}
+
 .slide2 {
    margin-top: 570px;
    background-color: #F5F5F5;
@@ -129,11 +136,16 @@ main {
    position: relative;
 }
 
-#destaques h1{
+#destaques .destaqueTCatalogo {
+   padding-top: 14px;
    font-size: 25px;
    text-align: center;
-   margin-top: 35px;
-   margin-bottom: 35px;
+}
+
+#destaques .destaqueT {
+   margin: 40px;
+   font-size: 25px;
+   text-align: center;
 }
 
 #cards {
@@ -151,8 +163,8 @@ main {
 .card {
    cursor: pointer;
    position: relative;
-   width: 280px;
-   height: 400px;
+   width: 250px;
+   max-height: 450px;
    background-color: #F5F5F5;
    border-radius: 7px;
 }
@@ -178,11 +190,13 @@ main {
 }
 
 #preco {
-   font-family: 'Kurale', serif;
+   font-family: 'rubik', serif;
    color: #FF5050;
-   font-size: 55px;
+   font-size: 25px;
    margin-right: 15px;
    float: right;
+   margin-top: 10px;
+   margin-bottom: 10px;
 }
 
 .conteudoCard button {
@@ -190,6 +204,7 @@ main {
 }
 
 .botoes {
+   border-radius: 0px 0px 7px 7px;
    cursor: pointer;
    background-color: rgb(255, 255, 255);
    display: flex;
@@ -199,23 +214,22 @@ main {
 #btnComprar {
    cursor: pointer;
    width: 82%;
+   border-radius: 0px 0px 0px 7px;
    font-size: 20px;
    background-color: #000000;
+   border: none !important;
    color:#F5F5F5;
 }
 
-#btnComprar:not(hover) {
-   transition: 0.3s all;
-}
-
 #btnCarinhoAdd {
+   border-radius: 7px;
    cursor: pointer;
    width: 18%;
    background-color: white;
    border: none;
 }
 
-#btnCarinhoAdd img{
+#btnCarinhoAdd img {
    margin: auto;
 }
 

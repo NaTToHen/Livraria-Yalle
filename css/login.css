@@ -70,9 +70,9 @@ header {
    transform: translate(-50%, -50%);
    background-color: #dfdfdf;
    width: 450px;
-   height: 400px;
+   min-height: 400px;
+   max-height: 500px;
    border-radius: 7px;
-   
 }
 
 p, input, button {
@@ -124,4 +124,14 @@ button {
 .linksMenu a:nth-child(2) {
    float: right;
    margin-right: 10%;
+}
+
+.linkCadastro {
+   margin-top: 23px;
+   margin-left: 20%;
+}
+
+.linkCadastro a {
+   text-decoration: none;
+   color: #FF5050;
 }
