@@ -126,7 +126,7 @@ li a {
 }
 
 .slide2 {
-   margin-top: 110px;
+   margin-top: 570px;
    background-color: #F5F5F5;
    width: 100%;
    height: 470px;
@@ -157,7 +157,7 @@ main {
    margin-top: 35px;
    width: 80%;
    margin: auto;
-   height: 350px;
+   height: 400px;
 }
 
 .card {
@@ -232,19 +232,6 @@ main {
 #btnCarinhoAdd img {
    margin: auto;
 }
-
-/*#btnCarinhoAdd img:hover {
-   width: 40px;
-   height: 40px;
-   transition: 0.2s all;
-}
-
-#btnCarinhoAdd img:not(hover) {
-   width: 35px;
-   height: 35px;
-   transition: 0.2s all;
-}
-*/
 
 /*
 .conteudoCard img {
