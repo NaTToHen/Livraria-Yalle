@@ -26,20 +26,36 @@ header {
 
 /* Conteudo */
 
-.form {
+.conteudo {
+   display: flex;
+}
+
+.direita {
+   position: relative;
+   width: 40%;
+   height: 100vh;
+   background-color: #FF3636;
+}
+
+.direita img {
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
+   cursor: pointer;
+}
+
+/* form */
+.form {
+   display: block;
+   position: relative;
    background-color: #dfdfdf;
-   width: 550px;
-   min-height: 650px;
-   max-height: 100vh;
+   width: 60%;
    border-radius: 7px;
 }
 
 p, input, button {
-   margin-left: 17%;
+   margin-left: 25%;
 }
 
 p {
@@ -55,7 +71,7 @@ input {
    outline: 0;
    margin-top: 0;
    margin-bottom: 24px;
-   width: 65%;
+   width: 50%;
    font-size: 16px;
    height: 38px;
    border: 0;
@@ -69,7 +85,7 @@ button {
    background-color: #FF5050;
    color: #ebebeb;
    height: 45px;
-   width: 67%;
+   width: 51%;
    font-size: 25px;
    border-radius: 7px;
    margin-top: 15px;
