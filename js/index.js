@@ -13,7 +13,6 @@ function newsSlide() {
          } else {
             currentItem += 1;
          }
-
          if(currentItem >= maxItens) { 
             currentItem = 0;
          }
@@ -23,7 +22,6 @@ function newsSlide() {
 
          itens.forEach(item =>
             item.classList.remove('current-item'));
-
          itens[currentItem].scrollIntoView({
             inline: "center",
             behavior: "smooth",
