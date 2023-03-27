@@ -30,7 +30,7 @@
 #menuSuperior h1 {
    text-decoration: none;
    margin-left: -45%;
-   font-size: 20px;
+   font-size: 18px;
    color: rgb(0, 0, 0);
 }
 
@@ -113,9 +113,35 @@
 
 .usuarioInfo {
    position: relative;
+   display: flex;
    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
    border-radius: 8px;
    margin: auto;
    width: 80%;
+   height: 85px;
+}
+
+.usuarioInfo p {
+   position: absolute;
+   color: #969696;
+   margin-top: 3%;
+   font-size: 20px;
+}
+
+.usuarioInfo p:nth-child(1) {
+   text-align: center;
+   left: 3%;
+   height: 85px;
+}
+.usuarioInfo p:nth-child(2) {
+   left: 10.5%;
+   height: 85px;
+}
+.usuarioInfo p:nth-child(3) {
+   left: 38.5%;
+   height: 85px;
+}
+.usuarioInfo p:nth-child(4) {
+   left: 61.5%;
    height: 85px;
 }
