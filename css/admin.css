@@ -95,6 +95,10 @@
    max-height: 500px;
 }
 
+#livros {
+   display: none;
+}
+
 /* Designing for scroll-bar */
 ::-webkit-scrollbar {
    width: 8px;
@@ -108,8 +112,12 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-   background: #ff0000;
+   background: #f76363;
    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: #ff0000;
 }
 
 .headerTabelaUsuario {
