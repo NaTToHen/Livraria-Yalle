@@ -20,7 +20,7 @@
    </header>
    <main id="menu-conteudo">
       <nav id="menuLateral">
-         <ul>
+         <ul class="listaMenu">
             <li class="itemMenu">Usuarios</li>
             <li class="itemMenu">Livros</li>
             <li class="itemMenu">Estoque</li>
@@ -29,115 +29,66 @@
          </ul>
       </nav>
       <main id="conteudo">
-         <div class="headerTabelaUsuario">
-            <p>id</p>
-            <p>nome</p>
-            <p>cpf</p>
-            <p>telefone</p>
-         </div>
+         
          <section id="usuarios">
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="usuarioInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
+            <table>
+               <tr>
+                   <th>id</th>
+                   <th>nome</th>
+                   <th>cpf</th>
+                   <th>telefone</th>
+                   <th>Editar</th>
+                   <th>Excluir</th>
+               </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  
+           </table>
          </section>
 
          <section id="livros">
+            
             <div class="livroInfo">
                <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
+               <p class="nome">Henrique Teste tabbs</p>
                <p class="cpf">999.999.999-99</p>
                <p class="telefone">(54) 99999-9920</p>
                <a href=""><img src="../img/editar.png" class="editar"></a>
@@ -145,7 +96,7 @@
             </div>
             <div class="livroInfo">
                <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
+               <p class="nome">Henrique Teste tabbs</p>
                <p class="cpf">999.999.999-99</p>
                <p class="telefone">(54) 99999-9920</p>
                <a href=""><img src="../img/editar.png" class="editar"></a>
@@ -153,79 +104,7 @@
             </div>
             <div class="livroInfo">
                <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Bonatto</p>
+               <p class="nome">Henrique Teste tabbs</p>
                <p class="cpf">999.999.999-99</p>
                <p class="telefone">(54) 99999-9920</p>
                <a href=""><img src="../img/editar.png" class="editar"></a>

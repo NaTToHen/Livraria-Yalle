@@ -86,18 +86,14 @@
    height: 90vh;
 }
 
-#usuarios {
-   padding-top: 10px;
-   margin: auto;
-   width: 80%;
-   overflow:hidden;
-   overflow-y:scroll;
-   max-height: 500px;
-}
-
-#livros {
+#conteudo section {
    display: none;
 }
+ 
+ #conteudo section.active {
+   display: block;
+   animation: show .5s forwards;
+ }
 
 /* Designing for scroll-bar */
 ::-webkit-scrollbar {
@@ -120,69 +116,8 @@
    background: #ff0000;
 }
 
-.headerTabelaUsuario {
-   display: flex;
-   width: 100%;
-}
-
-.headerTabelaUsuario p {
-   font-size: 17px;
-   margin: 0px 0px 15px 0px;
-   color: #969696;
-}
-
-.headerTabelaUsuario p:nth-child(1) {
-   margin-left: 14%;
-}
-.headerTabelaUsuario p:nth-child(2) {
-   margin-left: 6%;
-}
-.headerTabelaUsuario p:nth-child(3) {
-   margin-left: 16%;
-}
-.headerTabelaUsuario p:nth-child(4) {
-   margin-left: 16%;
-}
-
-.usuarioInfo {
-   position: relative;
-   display: flex;
-   justify-content: space-around;
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-   border-radius: 8px;
-   margin: auto;
-   margin-bottom: 15px;
-   width: 98%;
-   height: 75px;
-}
-
-.usuarioInfo p {
-   color: #969696;
-   margin-top: 2.5%;
-   font-size: 20px;
-}
-
-.usuarioInfo a {
-   margin-top: 2.5%;
-   font-size: 20px;
-}
-
-.usuarioInfo p:nth-child(1) {
-   text-align: center;
-   left: 3%;
-   height: 85px;
-}
-.usuarioInfo p:nth-child(2) {
-   left: 10.5%;
-   height: 85px;
-}
-.usuarioInfo p:nth-child(3) {
-   left: 38.5%;
-   height: 85px;
-}
-.usuarioInfo p:nth-child(4) {
-   left: 61.5%;
-   height: 85px;
+td {
+   gap: 15px;
 }
 
 .editar {
