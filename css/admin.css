@@ -116,8 +116,20 @@
    background: #ff0000;
 }
 
-td {
-   gap: 15px;
+table {
+   text-align: center;
+   margin: auto;
+   width: 70%;
+}
+
+table th, td, tr {
+   margin: 0px;
+   border-bottom: 2px solid #eee;
+   padding: 10px;
+}
+
+table img {
+   cursor: pointer;
 }
 
 .editar {
