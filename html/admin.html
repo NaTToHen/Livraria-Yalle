@@ -18,6 +18,8 @@
          </ul>
       </nav>
    </header>
+
+   <div id="fundoModal"></div>
    <main id="menu-conteudo">
       <nav id="menuLateral">
          <ul class="listaMenu">
@@ -28,6 +30,21 @@
             <li class="itemMenu">Relatórios</li>
          </ul>
       </nav>
+
+      <div id="modal">
+         <button type="submit" class="btn btn-outline-danger btnSair" onclick="fecharModal()" name="sair" id="fechar">X</button>
+         <p class="titulo-modal">Criar vaga</p>
+         <form action="adminVagas.php" method="POST">
+           <input type="text" class="campo-form" id="" placeholder="Nome" name="nome">
+           <input type="text" class="campo-form" id="" placeholder="Empresa" name="empresa">
+           <input type="text" class="campo-form" id="" placeholder="Salario" name="salario">
+           <textarea class="campo-form" id="desq" name="desq"></textarea>
+           <input type="text" class="campo-form" id="cidade" placeholder="Cidade" name="cidade">
+           <input type="text" class="campo-form" id="estado" placeholder="Estado" name="estado">
+           <button type="submit" class="btn btn-primary cadastrar" name="submit">Cadastrar vaga</button>
+         </form>
+       </div>
+
       <main id="conteudo">
          
          <section id="usuarios">
@@ -82,38 +99,158 @@
                      <td><img src="../img/editar.png"></td>
                      <td><img src="../img/deletar.png"></td>
                   </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
                   
            </table>
          </section>
 
          <section id="livros">
-            
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Teste tabbs</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Teste tabbs</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
-            <div class="livroInfo">
-               <p class="id">1</p>
-               <p class="nome">Henrique Teste tabbs</p>
-               <p class="cpf">999.999.999-99</p>
-               <p class="telefone">(54) 99999-9920</p>
-               <a href=""><img src="../img/editar.png" class="editar"></a>
-               <a href=""><img src="../img/deletar.png" class="deletar"></a>
-            </div>
+            <div class="add-livro" onclick="abrirModal()" >Adicionar Livro</div>
+            <table>
+               <thead>
+                  <tr>
+                     <th>Foto</th>
+                     <th>Id</th>
+                     <th>Nome</th>
+                     <th>Autor</th>
+                     <th>Editora</th>
+                     <th>Preço</th>
+                     <th>Editar</th>
+                     <th>Excluir</th>
+                 </tr>
+               </thead>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td>teste</td>
+                     <td>R$ 24.90</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td>teste</td>
+                     <td>R$ 24.90</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td>teste</td>
+                     <td>R$ 24.90</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td>teste</td>
+                     <td>R$ 24.90</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  <tr class="linhaTabela">
+                     <td>1</td>
+                     <td>Ronaldo Robero</td>
+                     <td>999.999.999-23</td>
+                     <td>(54) 99999-9999</td>
+                     <td>teste</td>
+                     <td>R$ 24.90</td>
+                     <td><img src="../img/editar.png"></td>
+                     <td><img src="../img/deletar.png"></td>
+                  </tr>
+                  
+           </table>
          </section>
-
          
       </main>
    </main>

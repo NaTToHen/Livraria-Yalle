@@ -83,7 +83,8 @@
 #conteudo {
    padding-top: 70px;
    width: 82vw;
-   height: 90vh;
+   max-height: 84vh;
+   overflow: auto;
 }
 
 #conteudo section {
@@ -116,6 +117,41 @@
    background: #ff0000;
 }
 
+.add-livro {
+   font-size: 20px;
+   cursor: pointer;
+   position: absolute;
+   top: 90px;
+   left: 23%;
+}
+
+#fundoModal {
+   position: absolute;
+   z-index: 9;
+   width: 100vw;
+   height: 90vh;
+   background-color: hsla(0, 0%, 0%, 0.275);
+   display: none;
+}
+
+#modal {
+   z-index: 10;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 700px;
+   min-height: 550px;
+   background-color: #ffffff;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+   border-radius: 10px;
+   display: none;
+}
+
+.add-livro:hover {
+   font-weight: bold;
+}
+
 table {
    text-align: center;
    margin: auto;
@@ -130,6 +166,10 @@ table th, td, tr {
 
 table img {
    cursor: pointer;
+}
+
+#livros table {
+   width: 90%;
 }
 
 .editar {
