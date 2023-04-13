@@ -32,16 +32,17 @@
       </nav>
 
       <div id="modal">
-         <button type="submit" class="btn btn-outline-danger btnSair" onclick="fecharModal()" name="sair" id="fechar">X</button>
-         <p class="titulo-modal">Criar vaga</p>
-         <form action="adminVagas.php" method="POST">
+         <button type="submit" class="btnSair" onclick="fecharModal()" name="sair" id="fechar">X</button>
+         <form action="admin.html" method="POST">
            <input type="text" class="campo-form" id="" placeholder="Nome" name="nome">
-           <input type="text" class="campo-form" id="" placeholder="Empresa" name="empresa">
-           <input type="text" class="campo-form" id="" placeholder="Salario" name="salario">
-           <textarea class="campo-form" id="desq" name="desq"></textarea>
-           <input type="text" class="campo-form" id="cidade" placeholder="Cidade" name="cidade">
-           <input type="text" class="campo-form" id="estado" placeholder="Estado" name="estado">
-           <button type="submit" class="btn btn-primary cadastrar" name="submit">Cadastrar vaga</button>
+           <input type="text" class="campo-form" id="" placeholder="Autor" name="autor">
+           <input type="text" class="campo-form" id="" placeholder="Editora" name="editora">
+           <textarea class="campo-form" id="sinopse" name="sinopse" placeholder="sinopse"></textarea>
+           <input type="text" class="campo-form" id="preco" placeholder="Preço" name="preco">
+           <input type="file" id="foto" name="foto" accept="image/png, image/jpeg">
+           
+           <button type="submit" class="criar" name="submit">Criar Livro</button>
+           <button type="button" class="cancelar" onclick="fecharModal()" name="sair" id="fechar">Cancelar</button>
          </form>
        </div>
 
@@ -184,7 +185,7 @@
          </section>
 
          <section id="livros">
-            <div class="add-livro" onclick="abrirModal()" >Adicionar Livro</div>
+            <div class="add-livro" onclick="abrirModal()" >Criar livro</div>
             <table>
                <thead>
                   <tr>
@@ -199,56 +200,15 @@
                  </tr>
                </thead>
                   <tr class="linhaTabela">
-                     <td>1</td>
-                     <td>Ronaldo Robero</td>
-                     <td>999.999.999-23</td>
-                     <td>(54) 99999-9999</td>
-                     <td>teste</td>
+                     <td><img class="img-livro" src="../img/livro.png"></td>
+                     <td class="id-table">1</td>
+                     <td>Rodrigo Ribeiro</td>
+                     <td>Yunilyk Tuniv</td>
+                     <td>Editora Nwilor</td>
                      <td>R$ 24.90</td>
-                     <td><img src="../img/editar.png"></td>
-                     <td><img src="../img/deletar.png"></td>
+                     <td class="img-acao"><img src="../img/editar.png"></td>
+                     <td class="img-acao"><img src="../img/deletar.png"></td>
                   </tr>
-                  <tr class="linhaTabela">
-                     <td>1</td>
-                     <td>Ronaldo Robero</td>
-                     <td>999.999.999-23</td>
-                     <td>(54) 99999-9999</td>
-                     <td>teste</td>
-                     <td>R$ 24.90</td>
-                     <td><img src="../img/editar.png"></td>
-                     <td><img src="../img/deletar.png"></td>
-                  </tr>
-                  <tr class="linhaTabela">
-                     <td>1</td>
-                     <td>Ronaldo Robero</td>
-                     <td>999.999.999-23</td>
-                     <td>(54) 99999-9999</td>
-                     <td>teste</td>
-                     <td>R$ 24.90</td>
-                     <td><img src="../img/editar.png"></td>
-                     <td><img src="../img/deletar.png"></td>
-                  </tr>
-                  <tr class="linhaTabela">
-                     <td>1</td>
-                     <td>Ronaldo Robero</td>
-                     <td>999.999.999-23</td>
-                     <td>(54) 99999-9999</td>
-                     <td>teste</td>
-                     <td>R$ 24.90</td>
-                     <td><img src="../img/editar.png"></td>
-                     <td><img src="../img/deletar.png"></td>
-                  </tr>
-                  <tr class="linhaTabela">
-                     <td>1</td>
-                     <td>Ronaldo Robero</td>
-                     <td>999.999.999-23</td>
-                     <td>(54) 99999-9999</td>
-                     <td>teste</td>
-                     <td>R$ 24.90</td>
-                     <td><img src="../img/editar.png"></td>
-                     <td><img src="../img/deletar.png"></td>
-                  </tr>
-                  
            </table>
          </section>
          
