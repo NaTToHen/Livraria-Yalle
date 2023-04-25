@@ -63,6 +63,14 @@ p {
    color: rgb(124, 124, 124);
 }
 
+.span-validacao {
+   color: #FF3636;
+   margin-left: 25%;
+   margin-top: -20px;
+   margin-bottom: 5px;
+   display: none;
+}
+
 .primeiro {
    margin-top: 6%;
 }

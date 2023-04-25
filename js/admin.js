@@ -14,7 +14,7 @@ function iniciarTab() {
    const menu = document.querySelectorAll(".listaMenu li");
    const conteudo = document.querySelectorAll("#conteudo section");
 
-   if(menu.length && conteudo.length) {
+   if (menu.length && conteudo.length) {
       conteudo[0].classList.add("active");
 
       function activeTab(index) {
