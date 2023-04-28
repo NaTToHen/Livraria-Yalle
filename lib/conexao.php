@@ -1,8 +1,8 @@
 <?php
 error_reporting();
 
-$conn = new misqli("localhost", "root", "", "");
+$conn = new mysqli("localhost", "root", "", "Yalle");
 if($conn -> connect_errno) {
-   echo "falha ao se conectar com o servidor".$misqli -> connect_errno;
+   die($misqli -> connect_errno);
 }
 ?>
