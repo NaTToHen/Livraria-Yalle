@@ -115,17 +115,6 @@ main {
    color:#F5F5F5;
 }
 
-#btnComprar:hover {
-   cursor: pointer;
-   width: 82%;
-   border-radius: 0px 0px 0px 7px;
-   font-size: 20px;
-   background-color: #FF5050;
-   border: none !important;
-   color:#000000;
-
-   transition: .2s;
-}
 #btnComprar:not(:hover) {
    cursor: pointer;
    width: 82%;
@@ -134,7 +123,6 @@ main {
    background-color: #000000;
    border: none !important;
    color:#ffffff;
-
    transition: .2s;
 }
 
