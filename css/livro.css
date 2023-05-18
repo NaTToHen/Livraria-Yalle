@@ -1,0 +1,33 @@
+main {
+   margin: auto;
+   margin-top: 50px;
+   width: 80%;
+   display: flex;
+}
+
+#fotoLivro {
+   margin-left: 5%;
+}
+
+#infoLivro {
+   margin-left: 5%;
+   width: 70%;
+   background-color: #F5F5F5;
+}
+
+.infosLivro {
+   width: 80%;
+   margin: auto;
+   margin-top: 90px;
+}
+
+.infosLivro h1 {
+   font-size: 30px;
+}
+
+.infosLivro p {
+   text-align: justify;
+   margin-top: 40px;
+   font-size: 20px;
+   color: #717171;
+}

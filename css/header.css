@@ -61,7 +61,17 @@ header {
 }
 
 .pesquisa {
+   position: relative;
    display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: #555555;
+   border-radius: 6px;
+}
+
+.pesquisa .imgPesquisa {
+   padding-right: 6px;
+   margin-bottom: -4px;
 }
 
 #txPesquisa {
@@ -69,10 +79,10 @@ header {
    height: 34px;
    padding: 5px;
    outline: 0;
-   border: solid 1px #00000000;
+   border: solid 1px #555555;
    background-color: #ebebeb;
    margin-right: 5px;
-   border-radius: 5px;
+   border-radius: 6px;
 }
 
 .menuLista img{
