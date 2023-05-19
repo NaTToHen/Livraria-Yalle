@@ -1,3 +1,7 @@
+<?php
+   include('../lib/conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -13,7 +17,7 @@
 <body>
    <header>
       <nav id="navBar">
-         <a href="index.html"><img src="../img/logo.png" alt="" class="logo" width="115px" height="74px"></a>
+         <a href="index.php"><img src="../img/logo.png" alt="" class="logo" width="115px" height="74px"></a>
       </nav>
    </header>
    <main>
@@ -28,7 +32,7 @@
             <div class="linksMenu">
                <!--<a href="">Esqueceu a senha?</a>-->
             </div>
-            <p class="linkCadastro">Não possui uma conta? <a href="registrar.html">Cadastre-se</a></p>
+            <p class="linkCadastro">Não possui uma conta? <a href="registrar.php">Cadastre-se</a></p>
          </form>
       </div>
    </main>

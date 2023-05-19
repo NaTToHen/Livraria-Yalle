@@ -1,3 +1,7 @@
+<?php
+   include('../lib/conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +15,7 @@
 <body>
    <header>
       <nav id="menuSuperior">
-         <a href="index.html"><img src="../img/logoAdmin.png" alt="" class="logo"></a>
+         <a href="index.php"><img src="../img/logoAdmin.png" alt="" class="logo"></a>
          <h1>DASHBOARD ADMINISTRADOR</h1>
          <ul class="menuLista">
             <li id="cadastrarNav"><a href="">Sair</a></li>

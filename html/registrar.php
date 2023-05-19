@@ -1,3 +1,7 @@
+<?php
+   include('../lib/conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +15,7 @@
 <body>
    <div class="conteudo">
       <div class="direita">
-         <a href="index.html"><img src="../img/logo branca.png"></a>
+         <a href="index.php"><img src="../img/logo branca.png"></a>
       </div>
       <form class="form">
          <p class="primeiro">Nome</p>

@@ -9,11 +9,100 @@ main {
    margin-left: 5%;
 }
 
+#fotoLivro img {
+   border-radius: 10px;
+}
+
 #infoLivro {
+   border-radius: 10px;
+   position: relative;
    margin-left: 5%;
    width: 70%;
-   background-color: #F5F5F5;
+   background-color: #dddddd;
 }
+
+#infoLivro .nomeLivro {
+   color: black;
+   position: absolute;
+   top: 7%;
+   left: 7%;
+   font-size: 55px;
+}
+
+#infoLivro .autorLivro {
+   text-transform: uppercase;
+   color: #8b8b8b;
+   position: absolute;
+   top: 20%;
+   left: 7%;
+   font-size: 20px;
+}
+
+#infoLivro .editoraLivro {
+   color: #8b8b8b;
+   position: absolute;
+   top: 50%;
+   left: 7%;
+   font-size: 20px;
+}
+
+#infoLivro .paginasLivro {
+   color: #8b8b8b;
+   position: absolute;
+   top: 56%;
+   left: 7%;
+   font-size: 20px;
+}
+
+#infoLivro .capaLivro {
+   color: #8b8b8b;
+   position: absolute;
+   top: 62%;
+   left: 7%;
+   font-size: 20px;
+}
+
+#infoLivro #precoLivro {
+   color: #FF5050;
+   font-family: 'Rubik';
+   position: absolute;
+   top: 50%;
+   right: 7%;
+   font-size: 55px;
+}
+
+#infoLivro .btnComprar {
+   background-color: #FF5050;
+   color: #ffffff;
+   font-family: 'Rubik';
+   position: absolute;
+   border: none;
+   width: 195px;
+   height: 73px;
+   border-radius: 15px;
+   cursor: pointer;
+   top: 70%;
+   right: 7%;
+   font-size: 35px;
+}
+
+#infoLivro img {
+   position: absolute;
+   cursor: pointer;
+   top: 70%;
+   right: 33%;
+   font-size: 35px;
+}
+
+#infoLivro .codigoLivro {
+   color: #8b8b8b;
+   position: absolute;
+   top: 10%;
+   right: 7%;
+   font-size: 20px;
+}
+
+/* CONTEUDO PAGINA */
 
 .infosLivro {
    width: 80%;
@@ -25,9 +114,30 @@ main {
    font-size: 30px;
 }
 
+.detalhesTitulo {
+   margin-top: 40px;
+   margin-bottom: 40px;
+}
+
 .infosLivro p {
    text-align: justify;
    margin-top: 40px;
    font-size: 20px;
    color: #717171;
+}
+
+.divDetalhes {
+   width: 100%;
+   border-radius: 10px;
+   height: 60vh;
+   margin-bottom: 60px;
+   background-color: #dddddd;
+}
+
+.erro {
+   position: absolute;
+   font-size: 100px;
+   top: 50%;
+   left: 16%;
+   margin: -50px 0 0 0;
 }

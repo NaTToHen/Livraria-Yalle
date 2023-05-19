@@ -49,9 +49,13 @@ header {
 .form {
    display: block;
    position: relative;
-   background-color: #dfdfdf;
+   background-color: #ffffff;
    width: 60%;
    border-radius: 7px;
+}
+
+input {
+   border: 1px solid #313131dd;
 }
 
 p, input, button {
@@ -60,7 +64,7 @@ p, input, button {
 
 p {
    margin-bottom: 6px;
-   color: rgb(124, 124, 124);
+   color: #7c7c7c;
 }
 
 .span-validacao {
@@ -85,6 +89,7 @@ input {
    border: 0;
    padding-left: 8px;
    border-radius: 7px;
+   border: 1px solid #7c7c7c;
 }
 
 button {
