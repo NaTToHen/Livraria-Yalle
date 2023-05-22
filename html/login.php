@@ -22,7 +22,7 @@
    </header>
    <main>
       <div class="form">
-         <form action="submit" class="formLogin" method="post">
+         <form action="login.php" class="formLogin" method="POST">
             <p class="primeiro">Nome</p>
             <input type="text" id="email" name="usuario">
             <p>Senha</p>

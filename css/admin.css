@@ -134,7 +134,7 @@
    display: none;
 }
 
-#modal {
+#modalLivro {
    z-index: 10;
    position: absolute;
    top: 50%;
@@ -149,7 +149,7 @@
    display: none;
 }
 
-#modal form {
+#modalLivro form {
    margin-top: 10%;
 }
 
@@ -160,7 +160,7 @@ textarea {
    max-height: 150px;
 }
 
-#modal form input, textarea {
+#modalLivro form input, textarea {
    border: 1px solid #a5a5a5;
    border-radius: 5px;
    margin: auto;
@@ -174,12 +174,12 @@ textarea {
    outline-color: #f76363;
 }
 
-#modal input[type=file] {
+#modalLivro input[type=file] {
    padding: 5px;
    border: none;
 }
 
-#modal input[type=file]::file-selector-button {
+#modalLivro input[type=file]::file-selector-button {
    background: none;
    cursor: pointer;
    color: #a5a5a5;
@@ -189,13 +189,13 @@ textarea {
    border-radius: 4px;
 }
 
-#modal input[type=file]::file-selector-button:hover {
+#modalLivro input[type=file]::file-selector-button:hover {
    color: #4c4c4c;
    border-color: #4c4c4c;
    transition: 0.5s;
 }
 
-#modal .criar {
+#modalLivro .criar {
    cursor: pointer;
    margin-top: 25px;
    float: right;
@@ -210,11 +210,11 @@ textarea {
    width: 120px;
 }
 
-#modal .criar:hover {
+#modalLivro .criar:hover {
    border-width: 2px;
 }
 
-#modal .btnSair {
+#modalLivro .btnSair {
    cursor: pointer;
    background: none;
    font-size: 20px;
@@ -228,11 +228,11 @@ textarea {
    border-radius: 5px;
 }
 
-#modal .btnSair:hover, .cancelar:hover, .criar:hover {
+#modalLivro .btnSair:hover, .cancelar:hover, .criar:hover {
    font-weight: bold;
 }
 
-#modal .cancelar {
+#modalLivro .cancelar {
    cursor: pointer;
    margin-top: 25px;
    float: right;

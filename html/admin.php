@@ -35,8 +35,8 @@
          </ul>
       </nav>
 
-      <div id="modal">
-         <button type="submit" class="btnSair" onclick="fecharModal()" name="sair" id="fechar">X</button>
+      <div id="modalLivro">
+         <button type="submit" class="btnSair" onclick="fecharModalLivro()" name="sair" id="fechar">X</button>
          <form action="admin.html" method="POST">
            <input type="text" class="campo-form" id="" placeholder="Nome" name="nome">
            <input type="text" class="campo-form" id="" placeholder="Autor" name="autor">
@@ -46,7 +46,7 @@
            <input type="file" id="foto" name="foto" accept="image/png, image/jpeg">
            
            <button type="submit" class="criar" name="submit">Criar Livro</button>
-           <button type="button" class="cancelar" onclick="fecharModal()" name="sair" id="fechar">Cancelar</button>
+           <button type="button" class="cancelar" onclick="fecharModalLivro()" name="sair" id="fechar">Cancelar</button>
          </form>
        </div>
 
@@ -75,7 +75,7 @@
            </table>
          </section>
          <section id="livros">
-            <div class="add-livro" onclick="abrirModal()" >Criar livro</div>
+            <div class="add-livro" onclick="abrirModalLivro()" >Criar livro</div>
             <table>
                <thead>
                   <tr>

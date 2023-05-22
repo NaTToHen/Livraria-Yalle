@@ -1,11 +1,11 @@
-const modal = document.querySelector('#modal');
+const modal = document.querySelector('#modalLivro');
 const fundomodal = document.querySelector('#fundoModal');
 
-function abrirModal() {
+function abrirModalLivro() {
    modal.style.display = 'block';
    fundomodal.style.display = 'block';
 }
-function fecharModal() {
+function fecharModalLivro() {
    modal.style.display = 'none';
    fundomodal.style.display = 'none';
 }
