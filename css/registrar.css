@@ -58,7 +58,7 @@ input {
    border: 1px solid #313131dd;
 }
 
-p, input, button {
+p, #nome, #cpf, #email, #endereco, #senha, button {
    margin-left: 25%;
 }
 
@@ -102,4 +102,29 @@ button {
    font-size: 25px;
    border-radius: 7px;
    margin-top: 15px;
+}
+
+.labels {
+   display: flex;
+}
+
+.inputs {
+   display: flex;
+   align-items: stretch;
+}
+
+#telefone {
+   margin-left: 25%;
+   max-width: 25%;
+}
+
+#dataNasc {
+   max-width: 20%;
+   margin-left: 4%;
+}
+
+.cadastrado {
+   color: #FF3636;
+   margin-left: 0%;
+   text-align: center;
 }

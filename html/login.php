@@ -1,5 +1,5 @@
 <?php
-   include('../lib/conexao.php');
+include('../lib/conexao.php');
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
    </header>
    <main>
       <div class="form">
-         <form action="login.php" class="formLogin" method="POST">
+         <form action="../lib/validacaoLogin.php" class="formLogin" method="post">
             <p class="primeiro">Nome</p>
             <input type="text" id="email" name="usuario">
             <p>Senha</p>
@@ -36,6 +36,15 @@
          </form>
       </div>
    </main>
+   <?php
+   if (isset($_GET['erro'])) {
+      if ($_GET['erro'] == 'true') {
+         print_r('<div class="erroLogin">
+               <h1 class="h1Erro">Usuário ou senha inválidos</h1>
+            </div>');
+      }
+   }
+   ?>
 </body>
 
 </html>

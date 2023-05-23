@@ -1,5 +1,5 @@
 <?php
-   include('../lib/conexao.php');
+   include("../lib/conexao.php");
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
       <div class="direita">
          <a href="index.php"><img src="../img/logo branca.png"></a>
       </div>
-      <form class="form">
+      <form class="form" method="POST" action="../lib/validacaoCadastro.php">
          <p class="primeiro">Nome</p>
          <input type="text" id="nome" name="nome" class="required" oninput="validacaoNome()">
             <label for="nome" class="span-validacao">Escreva um nome valido</label>
@@ -25,17 +25,25 @@
          <input type="text" id="cpf" name="cpf" class="required" maxlength="14" oninput="validaCPF()">
             <label for="cpf" class="span-validacao">Digite um cpf valido</label>
          <p>Email</p>
-         <input type="text" id="email" name="email" class="required"oninput="validacaoEmail()">
+         <input type="text" id="email" name="email" class="required" oninput="validacaoEmail()">
             <label for="email" class="span-validacao">Digite um email valido</label>
          <p>Endereço</p>
          <input type="text" id="endereco" name="endereco" class="required">
             <label for="endereco" class="span-validacao">Digite um endereço verdadeiro</label>
-         <p>Data de nascimento</p>
-         <input type="date" id="dataNasc" name="dataNasc">
+         <div class="labels">
+            <p>Telefone</p><p>Data de nascimento</p>
+         </div>
+         <div class="inputs">
+            <input type="text" id="telefone" name="telefone" class="required">
+            <input type="date" id="dataNasc" name="dataNasc">
+         </div>
          <p>Senha</p>
          <input type="password" id="senha" name="senha" class="required" oninput="validacaoSenha()">
             <label for="senha" class="span-validacao">A senha deve possuir 8 caracteres</label>
-         <button id="registrar" type="submit">Cadastrar</button>
+            <!--<div class="jaCadastrado">
+               <p class="cadastrado">cpf ja cadastrado</p>
+            </div>-->
+            <button id="registrar" type="submit" name="submit">Cadastrar</button>
       </form>
    </div>
 

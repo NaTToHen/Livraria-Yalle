@@ -31,7 +31,8 @@
    text-decoration: none;
    margin-left: -50%;
    font-size: 18px;
-   color: rgb(0, 0, 0);
+   text-transform: uppercase;
+   color: #000000;
 }
 
 #menuSuperior ul li {

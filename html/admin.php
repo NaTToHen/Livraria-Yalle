@@ -1,5 +1,6 @@
 <?php
    include('../lib/conexao.php');
+   include('../lib/verificaSessao.php');
 ?>
 
 <!DOCTYPE html>
@@ -10,15 +11,15 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../css/admin.css">
    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
-   <title>Admin-dashboard</title>
+   <title><?php echo $_SESSION['usuario'] ?> - dashboard</title>
 </head>
 <body>
    <header>
       <nav id="menuSuperior">
          <a href="index.php"><img src="../img/logoAdmin.png" alt="" class="logo"></a>
-         <h1>DASHBOARD ADMINISTRADOR</h1>
+         <h1>DASHBOARD - <?php echo $_SESSION['usuario'] ?></h1>
          <ul class="menuLista">
-            <li id="cadastrarNav"><a href="">Sair</a></li>
+            <li id="cadastrarNav"><a href="../lib/deslogar.php">Sair</a></li>
          </ul>
       </nav>
    </header>
