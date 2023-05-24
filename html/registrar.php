@@ -1,5 +1,6 @@
 <?php
    include("../lib/conexao.php");
+   session_start();
 ?>
 
 <!DOCTYPE html>

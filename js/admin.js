@@ -1,6 +1,24 @@
 const modal = document.querySelector('#modalLivro');
 const fundomodal = document.querySelector('#fundoModal');
 
+const criarAutor = document.querySelector('.criarAutor');
+const criarEditora = document.querySelector('.criarEditora');
+
+//autor
+function abrirFecharAddAutor() {
+   if(criarAutor.style.display == 'none') {
+      criarAutor.style.display = 'block';
+   } else {
+      criarAutor.style.display = 'none';
+   }
+}
+function abrirFecharAddEditora() {
+   if(criarEditora.style.display == 'none') {
+      criarEditora.style.display = 'block';
+   } else {
+      criarEditora.style.display = 'none';
+   }
+}
 function abrirModalLivro() {
    modal.style.display = 'block';
    fundomodal.style.display = 'block';

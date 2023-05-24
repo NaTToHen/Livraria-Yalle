@@ -1,6 +1,16 @@
 <?php
    include('../lib/conexao.php');
    include('../lib/verificaSessao.php');
+
+   $sqlUser = "SELECT * FROM usuario ORDER BY id_user DESC";
+   $sqlLivro = "SELECT * FROM livro ORDER BY id_livro DESC";
+
+   $sqlAutor = "SELECT autor.nome FROM autor INNER JOIN livro ON autor.id_autor = livro.fk_autor";
+   $autor = $conn->query($sqlAutor);
+
+   $resultUser = $conn->query($sqlUser);
+   $resultLivro = $conn->query($sqlLivro);
+   
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +29,7 @@
          <a href="index.php"><img src="../img/logoAdmin.png" alt="" class="logo"></a>
          <h1>DASHBOARD - <?php echo $_SESSION['usuario'] ?></h1>
          <ul class="menuLista">
-            <li id="cadastrarNav"><a href="../lib/deslogar.php">Sair</a></li>
+            <li id="cadastrarNav"><?php echo '<a href="../lib/deslogar.php?token='.md5($_SESSION['usuario']).'">Sair</a>' ?></li>
          </ul>
       </nav>
    </header>
@@ -38,10 +48,24 @@
 
       <div id="modalLivro">
          <button type="submit" class="btnSair" onclick="fecharModalLivro()" name="sair" id="fechar">X</button>
-         <form action="admin.html" method="POST">
-           <input type="text" class="campo-form" id="" placeholder="Nome" name="nome">
-           <input type="text" class="campo-form" id="" placeholder="Autor" name="autor">
-           <input type="text" class="campo-form" id="" placeholder="Editora" name="editora">
+         <form action="admin.html" method="POST" enctype="multipart/form-data">
+           <input type="text" class="campo-form" placeholder="Nome" name="nome">
+           <div class="selectDiv">
+              <select class="select-form" name="autor">
+                  <option value="">teste</option>
+                  <option value="">teste</option>
+                  <option value="">teste</option>
+                  <option value="">teste</option>
+              </select>
+           </div>
+           <div class="selectDiv">
+              <select class="select-form" name="editora">
+                  <option value="">teste</option>
+                  <option value="">teste</option>
+                  <option value="">teste</option>
+                  <option value="">teste</option>
+              </select>
+           </div>
            <textarea class="campo-form" id="sinopse" name="sinopse" placeholder="sinopse"></textarea>
            <input type="text" class="campo-form" id="preco" placeholder="Preço" name="preco">
            <input type="file" id="foto" name="foto" accept="image/png, image/jpeg">
@@ -60,23 +84,49 @@
                      <th>id</th>
                      <th>nome</th>
                      <th>cpf</th>
+                     <th>email</th>
                      <th>telefone</th>
                      <th>Editar</th>
                      <th>Excluir</th>
                  </tr>
                </thead>
-                  <tr class="linhaTabela">
-                     <td>1</td>
-                     <td>Ronaldo Robero</td>
-                     <td>999.999.999-23</td>
-                     <td>(54) 99999-9999</td>
-                     <td><img src="../img/editar.png"></td>
-                     <td><img src="../img/deletar.png"></td>
-                  </tr>
+                  <tbody>
+                     <?php
+                        while ($row = mysqli_fetch_array($resultUser)) {
+                        echo '
+                        <tr class="linhaTabela">
+                           <td>'.$row['id_user'].'</td>
+                           <td>'.$row['nome'].'</td>
+                           <td>'.$row['cpf'].'</td>
+                           <td>'.$row['email'].'</td>
+                           <td>'.$row['telefone'].'</td>
+                           <td class="img-acao"><img src="../img/editar.png"></td>
+                           <td class="img-acao"><img src="../img/deletar.png"></td>
+                        </tr>';
+                        }
+                     ?>
+                  </tbody>
            </table>
          </section>
+
          <section id="livros">
-            <div class="add-livro" onclick="abrirModalLivro()" >Criar livro</div>
+            <div class="adds">
+               <p class="add-link" onclick="abrirModalLivro()" >Criar livro</p>
+               <p class="add-link" onclick="abrirFecharAddAutor()" >Criar autor</p>
+               <div class="criarAutor">
+                  <form method="post" action="">
+                     <input type="text" class="inputCriar" placeholder="Nome do autor" name="autorNome">
+                     <button type="submit" class="btnCriar">Criar</button>
+                  </form>
+               </div>
+               <p class="add-link" onclick="abrirFecharAddEditora()" >Criar editora</p>
+               <div class="criarEditora">
+                  <form method="post" action="">
+                     <input type="text" class="inputCriar" placeholder="Nome da editora" name="editoraNome">
+                     <button type="submit" class="btnCriar">Criar</button>
+                  </form>
+               </div>
+            </div>
             <table>
                <thead>
                   <tr>
@@ -90,6 +140,23 @@
                      <th>Excluir</th>
                  </tr>
                </thead>
+
+               <tbody>
+                  <?php
+                     while ($row = mysqli_fetch_array($resultLivro)) {
+                        echo '
+                        <tr class="linhaTabela">
+                           <td>'.$row['id_livro'].'</td>
+                           <td>'.$row['nome'].'</td>
+                           <td>'.$row['autor'].'</td>
+                           <td>'.$row['editora'].'</td>
+                           <td>'.$row['preço'].'</td>
+                           <td class="img-acao"><img src="../img/editar.png"></td>
+                           <td class="img-acao"><img src="../img/deletar.png"></td>
+                        </tr>';
+                     }
+                  ?>
+               </tbody>
                   <tr class="linhaTabela">
                      <td><img class="img-livro" src="../img/livro.png"></td>
                      <td class="id-table">1</td>

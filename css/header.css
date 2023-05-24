@@ -120,3 +120,33 @@ li a {
    text-decoration: none;
    color: black;
 }
+
+li a:hover {
+   font-weight: bold;
+}
+
+.carrinhoImg {
+   margin-right: 20px;
+}
+
+.dropdown:hover .dropdownMenu{
+   display: block;
+}
+
+.dropdownMenu {
+   z-index: 12;
+   border-radius: 10px;
+   background-color: #000;
+   position: absolute;
+   display: none;
+}
+
+.dropdownMenu a {
+   color: white;
+   margin: 15px;
+   display: block;
+}
+
+.dropdownMenu a:hover {
+   font-weight: bold;
+}

@@ -1,5 +1,6 @@
 <?php
    include('../lib/conexao.php');
+   session_start();
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@
    
    <script src="https://www.w3schools.com/lib/w3.js"></script>
    <body>
-   <div w3-include-html="header.html"></div> 
+   <div w3-include-html="header.php"></div> 
    <script>w3.includeHTML();</script>
 
    <main>

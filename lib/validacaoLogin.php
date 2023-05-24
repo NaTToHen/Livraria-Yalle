@@ -3,7 +3,7 @@
    include('conexao.php');
 
    if(empty($_POST['usuario']) || empty($_POST['senha'])) {
-      header('location: ../html/login.php');
+      header('location: ../html/login.php?erro=true');
       exit();
    }
 
