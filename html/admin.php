@@ -182,6 +182,26 @@
                <p class="">Relatório de usuários</p>
                <button type="submit" name="userRelatorios" class="user">Gerar pdf</button>
             </div>
+
+            <div class="relatorioDiv">
+               <p class="">Relatório de livros cadastrados</p>
+               <button type="submit" name="userRelatorios" class="user">Gerar pdf</button>
+            </div>
+
+            <div class="relatorioDiv">
+               <p class="">Relatório de produtos cadastrados</p>
+               <button type="submit" name="userRelatorios" class="user">Gerar pdf</button>
+            </div>
+
+            <div class="relatorioDiv">
+               <p class="">Relatório de autores cadastrados</p>
+               <button type="submit" name="userRelatorios" class="user">Gerar pdf</button>
+            </div>
+
+            <div class="relatorioDiv">
+               <p class="">Relatório de vendas</p>
+               <button type="submit" name="userRelatorios" class="user">Gerar pdf</button>
+            </div>
          </section>
       </main>
    </main>

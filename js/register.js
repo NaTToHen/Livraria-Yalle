@@ -36,5 +36,5 @@ function validacaoEmail() {
    if (emailRegex.test(campo[2].value)) correct(2); else error(2);
 }
 function validacaoSenha() {
-   if (campo[4].value.length < 8) error(4); else correct(4);
+   if (campo[6].value.length < 8) error(6); else correct(6);
 }

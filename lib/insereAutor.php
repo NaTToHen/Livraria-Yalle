@@ -1,11 +1,11 @@
 <?php
 header('Content-Type: application/json');
-$name = $_POST['name'];
+$nomeAutor = $_POST['name'];
 
 $pdo = new PDO('mysql:host=localhost; dbname=yalledb;', 'root', '');
 
 $stmt = $pdo->prepare('INSERT INTO autor(nome_autor) VALUES (:nome)');
-$stmt->bindValue(':nome', $name);
+$stmt->bindValue(':nome', $nomeAutor);
 $stmt->execute();
 
    if($stmt->rowCount()) {

@@ -26,7 +26,6 @@ $insert = "INSERT INTO usuario(nome, cpf, email, endereco_user, dataNasc, telefo
 if($conn->query($insert) === true) {
    $_SESSION['status_cadastro'] = true;
 }
-
 $conn->close();
 
 header('Location: ../html/login.php');

@@ -36,7 +36,7 @@
          </div>
          <div class="inputs">
             <input type="text" id="telefone" name="telefone" class="required">
-            <input type="date" id="dataNasc" name="dataNasc">
+            <input type="date" id="dataNasc" name="dataNasc" class="required">
          </div>
          <p>Senha</p>
          <input type="password" id="senha" name="senha" class="required" oninput="validacaoSenha()">
@@ -44,7 +44,7 @@
             <!--<div class="jaCadastrado">
                <p class="cadastrado">cpf ja cadastrado</p>
             </div>-->
-            <button id="registrar" type="submit" name="submit">Cadastrar</button>
+         <button id="registrar" type="submit" name="submit">Cadastrar</button>
       </form>
    </div>
 
