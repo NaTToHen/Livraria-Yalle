@@ -135,15 +135,14 @@ li a:hover {
 
 .dropdownMenu {
    z-index: 12;
-   border-radius: 10px;
-   background-color: #000;
+   background-color: #000000;
    position: absolute;
    display: none;
 }
 
 .dropdownMenu a {
    color: white;
-   margin: 15px;
+   margin: 20px;
    display: block;
 }
 

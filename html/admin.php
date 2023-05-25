@@ -5,12 +5,11 @@
    $sqlUser = "SELECT * FROM usuario ORDER BY id_user DESC";
    $sqlLivro = "SELECT * FROM livro ORDER BY id_livro DESC";
 
-   $sqlAutor = "SELECT autor.nome FROM autor INNER JOIN livro ON autor.id_autor = livro.fk_autor";
-   $autor = $conn->query($sqlAutor);
+   //$sqlAutor = "SELECT autor.nome FROM autor INNER JOIN livro ON autor.id_autor = livro.fk_autor";
+   //$autor = $conn->query($sqlAutor);
 
    $resultUser = $conn->query($sqlUser);
-   $resultLivro = $conn->query($sqlLivro);
-   
+   $resultLivro = $conn->query($sqlLivro); 
 ?>
 
 <!DOCTYPE html>
@@ -114,16 +113,16 @@
                <p class="add-link" onclick="abrirModalLivro()" >Criar livro</p>
                <p class="add-link" onclick="abrirFecharAddAutor()" >Criar autor</p>
                <div class="criarAutor">
-                  <form method="post" action="">
-                     <input type="text" class="inputCriar" placeholder="Nome do autor" name="autorNome">
-                     <button type="submit" class="btnCriar">Criar</button>
+                  <form method="post" action="" id="formAutor">
+                     <input type="text" class="inputCriar" placeholder="Nome do autor" name="autorNome" id="autorNome">
+                     <button type="submit" class="btnCriar" form="formAutor">Criar</button>
                   </form>
                </div>
                <p class="add-link" onclick="abrirFecharAddEditora()" >Criar editora</p>
                <div class="criarEditora">
-                  <form method="post" action="">
-                     <input type="text" class="inputCriar" placeholder="Nome da editora" name="editoraNome">
-                     <button type="submit" class="btnCriar">Criar</button>
+                  <form method="post" action="" id="formEditora">
+                     <input type="text" class="inputCriar" placeholder="Nome da editora" name="editoraNome" id="editoraNome">
+                     <button type="submit" class="btnCriar" form="formEditora">Criar</button>
                   </form>
                </div>
             </div>
@@ -169,9 +168,24 @@
                   </tr>
            </table>
          </section>
+
+         <section id="estoque">
+            estoqie
+         </section>
+
+         <section id="fornecedoras">
+
+         </section>
+
+         <section id="relatorios">
+            <div class="relatorioDiv">
+               <p class="">Relatório de usuários</p>
+               <button type="submit" name="userRelatorios" class="user">Gerar pdf</button>
+            </div>
+         </section>
       </main>
    </main>
-
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
    <script src="../js/admin.js"></script>
 </body>
 </html>

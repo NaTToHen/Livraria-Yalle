@@ -12,6 +12,7 @@ function abrirFecharAddAutor() {
       criarAutor.style.display = 'none';
    }
 }
+
 function abrirFecharAddEditora() {
    if(criarEditora.style.display == 'none') {
       criarEditora.style.display = 'block';
@@ -19,6 +20,7 @@ function abrirFecharAddEditora() {
       criarEditora.style.display = 'none';
    }
 }
+
 function abrirModalLivro() {
    modal.style.display = 'block';
    fundomodal.style.display = 'block';
@@ -49,3 +51,36 @@ function iniciarTab() {
    }
 }
 iniciarTab();
+
+
+//autor
+$('#formAutor').submit(function(e) {
+   e.preventDefault();
+
+   var autorNome = $('#autorNome').val();
+   console.log(autorNome);
+   $.ajax({
+      url: '../lib/insereAutor.php',
+      method: 'POST',
+      data: {name: autorNome},
+      dataType: 'json'
+   }).done(function(result) {
+      console.log(result);
+   });
+});
+
+//editora
+$('#formEditora').submit(function(e) {
+   e.preventDefault();
+
+   var editoraNome = $('#editoraNome').val();
+   console.log(editoraNome);
+   $.ajax({
+      url: '../lib/insereEditora.php',
+      method: 'POST',
+      data: {name: editoraNome},
+      dataType: 'json'
+   }).done(function(result) {
+      console.log(result);
+   });
+});
