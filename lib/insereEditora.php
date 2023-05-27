@@ -6,8 +6,7 @@ $pdo = new PDO('mysql:host=localhost; dbname=yalledb;', 'root', '');
 
 $stmt = $pdo->prepare('INSERT INTO editora(nome) VALUES (:nome)');
 $stmt->bindValue(':nome', $name);
-
-   $stmt->execute();
+$stmt->execute();
    
    if($stmt->rowCount()) {
       echo json_encode('editora inserido');

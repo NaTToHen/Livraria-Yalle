@@ -28,7 +28,11 @@
          <a href="index.php"><img src="../img/logoAdmin.png" alt="" class="logo"></a>
          <h1>DASHBOARD - <?php echo $_SESSION['usuario'] ?></h1>
          <ul class="menuLista">
-            <li id="cadastrarNav"><?php echo '<a href="../lib/deslogar.php?token='.md5($_SESSION['usuario']).'">Sair</a>' ?></li>
+            <li id="cadastrarNav">
+               <?php
+                  echo '<a href="../lib/deslogar.php?token='.md5($_SESSION['usuario']).'">Sair</a>' 
+            ?>
+            </li>
          </ul>
       </nav>
    </header>
