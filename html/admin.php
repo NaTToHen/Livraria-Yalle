@@ -31,7 +31,7 @@
             <li id="cadastrarNav">
                <?php
                   echo '<a href="../lib/deslogar.php?token='.md5($_SESSION['usuario']).'">Sair</a>' 
-            ?>
+               ?>
             </li>
          </ul>
       </nav>
@@ -184,7 +184,7 @@
          <section id="relatorios">
             <div class="relatorioDiv">
                <p class="">Relatório de usuários</p>
-               <button type="submit" name="userRelatorios" class="user">Gerar pdf</button>
+               <a href="../relatorios/geradorPdfUsuarios.php" target="_blank"><button type="submit" name="userRelatorios" class="user">Gerar pdf</button></a>
             </div>
 
             <div class="relatorioDiv">
