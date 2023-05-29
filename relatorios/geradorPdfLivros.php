@@ -1,8 +1,10 @@
 <?php
 include('../lib/conexao.php');
 require __DIR__ . '\vendor\autoload.php';
-$sqlUser = "SELECT * FROM usuario ORDER BY id_user DESC";
-$resultUser = mysqli_query($conn, $sqlUser);
+$sqlLivro = "SELECT livro.*, autor.nome_autor FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor";
+$resultLivro = $conn->query($sqlLivro);
+var_dump($sqlLivro);
+var_dump($resultLivro);
 
 date_default_timezone_set('America/Sao_Paulo');
 $dataAtual = date('d-m-Y H:i');
@@ -67,7 +69,7 @@ echo $dataAtual;
    </style>';
    $html .= '<div class="header">
       <h2>Livraria Yalle</h2>
-      <h1>Relatório de Usuarios cadastrados</h1>
+      <h1>Relatório de livros cadastrados</h1>
       <p>'. $dataAtual .'</p>
    </div>';
    $html .= '<table border=1>';	
@@ -75,24 +77,24 @@ echo $dataAtual;
 	$html .= '<tr>';
 	$html .= '<th>ID</th>';
 	$html .= '<th>Nome</th>';
-	$html .= '<th>Cpf</th>';
-	$html .= '<th>Email</th>';
-	$html .= '<th>Telefone</th>';;
+	$html .= '<th>Autor</th>';
+	$html .= '<th>Editora</th>';
+	$html .= '<th>Preço</th>';;
 	$html .= '</tr>';
 	$html .= '</thead>';
 	$html .= '<tbody>';
-while ($row = mysqli_fetch_array($resultUser)) {
+/*while ($row) {
    $html .= '<tr>';
-      $html .= '<td>'.$row['id_user']."</td>";
+      $html .= '<td>'.$row['id_livro']."</td>";
       $html .= '<td>'.$row['nome']."</td>";
-      $html .= '<td>'.$row['cpf']."</td>";
-      $html .= '<td>'.$row['email']."</td>";
-      $html .= '<td>'.$row['telefone']."</td>";
+      //$html .= '<td>'.$row['autor']."</td>";
+      //$html .= '<td>'.$row['email']."</td>";
+      //$html .= '<td>'.$row['telefone']."</td>";
    $html .= '</tr>';
-   }
+*/
    $html .= '</tbody>';
 	$html .= '</table>';
-
+/*
 use Dompdf\Dompdf;
 
 $dompdf = new Dompdf(['isRemoteEnabled' => true]);
@@ -104,6 +106,6 @@ $dompdf->stream(
    array(
       "Attachment" => false //Para realizar o download somente alterar para true
    )
-);
+);*/
 
 ?>

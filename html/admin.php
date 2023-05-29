@@ -189,7 +189,7 @@
 
             <div class="relatorioDiv">
                <p class="">Relatório de livros cadastrados</p>
-               <button type="submit" name="userRelatorios" class="user">Gerar pdf</button>
+               <a href="../relatorios/geradorPdfLivros.php" target="_blank"><button type="submit" name="userRelatorios" class="user">Gerar pdf</button></a>
             </div>
 
             <div class="relatorioDiv">
