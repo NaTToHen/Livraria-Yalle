@@ -3,13 +3,11 @@
    include('../lib/verificaSessao.php');
 
    $sqlUser = "SELECT * FROM usuario ORDER BY id_user DESC";
+      $resultUser = $conn->query($sqlUser);
    $sqlLivro = "SELECT * FROM livro ORDER BY id_livro DESC";
-
-   //$sqlAutor = "SELECT autor.nome FROM autor INNER JOIN livro ON autor.id_autor = livro.fk_autor";
-   //$autor = $conn->query($sqlAutor);
-
-   $resultUser = $conn->query($sqlUser);
-   $resultLivro = $conn->query($sqlLivro); 
+      $resultLivro = $conn->query($sqlLivro);
+   $sqlEstoque = "SELECT * FROM estoque ORDER BY id_estoque DESC";
+      $resultEstoque = $conn->query($sqlEstoque);
 ?>
 
 <!DOCTYPE html>
@@ -95,7 +93,7 @@
                </thead>
                   <tbody>
                      <?php
-                        while ($row = mysqli_fetch_array($resultUser)) {
+                        while($row = mysqli_fetch_array($resultUser)) {
                         echo '
                         <tr class="linhaTabela">
                            <td>'.$row['id_user'].'</td>
