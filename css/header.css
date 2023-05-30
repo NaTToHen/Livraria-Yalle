@@ -136,6 +136,7 @@ li a:hover {
 .dropdownMenu {
    z-index: 12;
    background-color: #000000;
+   border-radius: 0 10px 10px 10px;
    position: absolute;
    display: none;
 }

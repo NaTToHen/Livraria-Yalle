@@ -23,12 +23,9 @@
 
    <main>
       <div class="slides">
-
       </div>
-
       <div id="destaques">
          <h1 class="destaqueT">Lançamentos</h1>
-         
          <div class="container">
             <button class="flechaEsquerda control"><img src="../img/esquerda.png" alt=""></button>
             <button class="flechaDireita control"><img src="../img/direita.png" alt=""></button>

@@ -4,9 +4,7 @@
 
    $sqlEstoque = "SELECT * FROM estoque ORDER BY id_estoque DESC";
    $resultEstoque = $conn->query($sqlEstoque);
-
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -31,6 +29,22 @@
          </ul>
       </nav>
    </header>
+   <?php
+   if (isset($_GET['livroCadastrado'])) {
+      if ($_GET['livroCadastrado'] == 'true') {
+         print_r('<div id="cadastrado">
+               <h1 class="">Livro cadastrado com sucesso</h1>
+            </div>');
+      }
+   }
+   if (isset($_GET['erroLivro'])) {
+      if ($_GET['erroLivro'] == 'true') {
+         print_r('<div id="naoCadastrado">
+               <h1 class="">O livro não foi cadastrado</h1>
+            </div>');
+      }
+   }
+   ?>
 
    <div id="fundoModal"></div>
    <main id="menu-conteudo">
@@ -209,6 +223,15 @@
       </main>
    </main>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script>
+      setTimeout(function() {
+         $('#cadastrado').fadeOut('fast');
+      }, 5000);
+
+      setTimeout(function() {
+         $('#naoCadastrado').fadeOut('fast');
+      }, 5000);
+   </script>
    <script src="../js/admin.js"></script>
 </body>
 </html>

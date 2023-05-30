@@ -1,10 +1,8 @@
 <?php
 include('../lib/conexao.php');
 require __DIR__ . '\vendor\autoload.php';
-$sqlLivro = "SELECT livro.*, autor.nome_autor FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor";
-$resultLivro = $conn->query($sqlLivro);
-var_dump($sqlLivro);
-var_dump($resultLivro);
+$sqllivro = "SELECT livro.*, autor.nome_autor, editora.nome_editora FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor INNER JOIN editora ON livro.fk_editora = editora.id_editora";
+$resultlivro = mysqli_query($conn, $sqllivro);
 
 date_default_timezone_set('America/Sao_Paulo');
 $dataAtual = date('d-m-Y H:i');
@@ -56,6 +54,7 @@ echo $dataAtual;
 
    thead th, td, tr {
       margin: 0px;
+      gap: 0;
       border: none;
       padding: 10px;
    }
@@ -63,11 +62,12 @@ echo $dataAtual;
    tbody th, td, tr {
       margin: 0px;
       border: none;
-      border-top: 1 px solid #c1c1c4;
       padding: 10px;
    }
    </style>';
-   $html .= '<div class="header">
+   $html .= '<img src="../img/logo.png" alt="Imagem">
+   <div class="header">
+      
       <h2>Livraria Yalle</h2>
       <h1>Relatório de livros cadastrados</h1>
       <p>'. $dataAtual .'</p>
@@ -83,29 +83,28 @@ echo $dataAtual;
 	$html .= '</tr>';
 	$html .= '</thead>';
 	$html .= '<tbody>';
-/*while ($row) {
+while ($row = mysqli_fetch_array($resultlivro)) {
    $html .= '<tr>';
       $html .= '<td>'.$row['id_livro']."</td>";
       $html .= '<td>'.$row['nome']."</td>";
-      //$html .= '<td>'.$row['autor']."</td>";
-      //$html .= '<td>'.$row['email']."</td>";
-      //$html .= '<td>'.$row['telefone']."</td>";
+      $html .= '<td>'.$row['nome_autor']."</td>";
+      $html .= '<td>'.$row['nome_editora']."</td>";
+      $html .= '<td>R$ '.$row['preco'].".00</td>";
    $html .= '</tr>';
-*/
+   }
    $html .= '</tbody>';
 	$html .= '</table>';
-/*
-use Dompdf\Dompdf;
 
-$dompdf = new Dompdf(['isRemoteEnabled' => true]);
+use Dompdf\Dompdf;
+$dompdf = new Dompdf();
 $dompdf->loadHtml($html);
 $dompdf->render();
 header('Content-Type: application/pdf');
 $dompdf->stream(
-   "relatorioUsers.pdf", 
+   "relatorioLivros.pdf", 
    array(
       "Attachment" => false //Para realizar o download somente alterar para true
    )
-);*/
+);
 
 ?>
