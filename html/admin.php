@@ -68,7 +68,7 @@
                   $resultEditora = $conn->query($sqlEditora);
                   while($Editora = mysqli_fetch_array($resultEditora)) {
                   ?>
-                  <option value="<?php echo $Editora['id_editora'] ?>"><?php echo $Editora['nome'] ?></option>
+                  <option value="<?php echo $Editora['id_editora'] ?>"><?php echo $Editora['nome_editora'] ?></option>
                   <?php } ?>
               </select>
            </div>
@@ -150,7 +150,9 @@
                </thead>
                <tbody>
                   <?php
-                  $sqlLivro = "SELECT * FROM livro ORDER BY id_livro DESC";
+                  //$sqlLivro = "SELECT * FROM livro ORDER BY id_livro DESC";
+                  $sqlLivro = "SELECT livro.*, autor.nome_autor, editora.nome_editora FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor INNER JOIN editora ON livro.fk_editora = editora.id_editora";
+
                   $resultLivro = $conn->query($sqlLivro);
                      while ($row = mysqli_fetch_array($resultLivro)) {
                         echo '
@@ -158,9 +160,9 @@
                            <td><img class="img-livro" src="'.$row['pathFoto'].'"></td>
                            <td>'.$row['id_livro'].'</td>
                            <td>'.$row['nome'].'</td>
-                           <td>autor</td>
-                           <td>editora</td>
-                           <td>'.$row['preco'].'</td>
+                           <td>'.$row['nome_autor'].'</td>
+                           <td>'.$row['nome_editora'].'</td>
+                           <td>R$ '.$row['preco'].'.00</td>
                            <td class="img-acao"><a href="../lib/editarUsuario.php"><img src="../img/editar.png"></a></td>
                            <td class="img-acao"><img src="../img/deletar.png"></td>
                         </tr>';

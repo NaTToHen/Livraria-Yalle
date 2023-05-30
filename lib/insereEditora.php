@@ -4,7 +4,7 @@ $name = $_POST['name'];
 
 $pdo = new PDO('mysql:host=localhost; dbname=yalledb;', 'root', '');
 
-$stmt = $pdo->prepare('INSERT INTO editora(nome) VALUES (:nome)');
+$stmt = $pdo->prepare('INSERT INTO editora(nome_editora) VALUES (:nome)');
 $stmt->bindValue(':nome', $name);
 $stmt->execute();
    
