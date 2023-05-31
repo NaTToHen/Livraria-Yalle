@@ -75,8 +75,23 @@ main {
    margin-right: auto;
 }
 
+.conteudoCard .imgLivro {
+   width: 200px;
+   height: 260px;
+}
+
 .conteudoCard h2, p {
    text-align: center;
+}
+
+.conteudoCard h2 {
+   max-height: 60px;
+   min-height: 60px;
+}
+
+.conteudoCard a {
+   text-decoration: none;
+   color: white;
 }
 
 .conteudoCard p {

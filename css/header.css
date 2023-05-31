@@ -78,6 +78,11 @@ header {
    margin-bottom: -4px;
 }
 
+.btnPesquisar {
+   background: none;
+   border: none;
+}
+
 #txPesquisa {
    width: 350px;
    height: 34px;

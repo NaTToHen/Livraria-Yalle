@@ -31,19 +31,25 @@
             <button class="flechaDireita control"><img src="../img/direita.png" alt=""></button>
             <div class="gallery-wrapper">
                <div id="gallery">
+                  <?php 
+                  //$cards = $conn->query("SELECT * FROM livro ORDER BY id_livro DESC LIMIT 7");
+                  $cards = $conn->query("SELECT livro.*, autor.nome_autor, editora.nome_editora FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor INNER JOIN editora ON livro.fk_editora = editora.id_editora ORDER BY id_livro DESC LIMIT 7");
+                  while ($card = mysqli_fetch_array($cards)) {
+                  ?>
                   <div class="card item current-item">
                      <div class="conteudoCard">
-                        <img src="../img/livro.png" alt="">
-                        <h2 id="nomeLivro">teste</h2>
-                        <p id="autor">autor</p>
-                        <h1 id="preco">R$ 35,99</h1>
+                        <img src="<?php echo $card['pathFoto']; ?>" class="imgLivro">
+                        <h2 id="nomeLivro"><?php echo $card['nome']; ?></h2>
+                        <p id="autor"><?php echo $card['nome_autor']; ?></p>
+                        <h1 id="preco">R$<?php echo $card['preco']; ?>.00</h1>
                         <div class="botoes">
                            <button id="btnComprar">Comprar</button>
                            <button id="btnCarinhoAdd"><img src="../img/carrinho.png" alt="" width="35px" height="35px"></button>
                         </div>
                      </div>
                   </div>
-                  <div class="card item">
+                  <?php } ?>
+                  <!--<div class="card item">
                      <div class="conteudoCard">
                         <img src="../img/livro.png" alt="">
                         <h2 id="nomeLivro">teste</h2>
@@ -114,7 +120,7 @@
                            <button id="btnCarinhoAdd"><img src="../img/carrinho.png" alt="" width="35px" height="35px"></button>
                         </div>
                      </div>
-                  </div>
+                  </div>-->
                </div>
             </div>
          </div>

@@ -1,6 +1,27 @@
 <?php
-   include('../lib/conexao.php');
-   session_start();
+   if(!empty($_GET['id']))
+   {
+      session_start();
+      include("../lib/conexao.php");
+
+      $id = $_GET['id'];
+
+      $livro = $conn->query("SELECT livro.*, autor.nome_autor, editora.nome_editora FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor INNER JOIN editora ON livro.fk_editora = editora.id_editora WHERE id_livro=$id");
+
+      if($livro->num_rows > 0) {
+         while($info = $livro->fetch_array()) {
+            $path = $info['pathFoto'];
+            $nome = $info['nome'];
+            $autor = $info['nome_autor'];
+            $sinopse = $info['sinopse'];
+            $preco = $info['preco'];
+            $editora = $info['nome_editora'];
+            $idLivro = $info['id_livro'];
+         }
+      } else {
+        echo "erro";
+      }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -23,16 +44,16 @@
 
    <main>
       <div id="fotoLivro">
-         <img src="../img/livro.png" alt="" width="300px">
+         <img src="<?php echo $path; ?>" alt="" width="300px">
       </div>
       <div id="infoLivro">
-         <h1 class="nomeLivro">Os Irmãos</h1>
-         <h2 class="autorLivro">dostoievski, fiodor</h2>
-            <p class="editoraLivro">Editora: Mariin Claret</p>
+         <h1 class="nomeLivro"><?php echo $nome; ?></h1>
+         <h2 class="autorLivro"><?php echo $autor; ?></h2>
+            <p class="editoraLivro"><?php echo $editora; ?></p>
             <p class="paginasLivro">120 paginas</p>
             <p class="capaLivro">capa dura</p>
-         <p class="codigoLivro">Cod: 001</p>
-         <h1 id="precoLivro">R$ 35,99</h1>
+         <p class="codigoLivro">COD: 0<?php echo $id; ?></p>
+         <h1 id="precoLivro">R$ <?php echo $preco; ?>.00</h1>
          <img src="../img/carrinho.png" alt="">
          <button type="submit" class="btnComprar">Comprar</button>
       </div>
@@ -40,8 +61,7 @@
 
    <section class="infosLivro">
       <h1>Sinópse</h1>
-      <p>       "Os irmãos Karamázov" é o último romance de Dostoiévski. No fundo, ele resume toda a criatividade do escritor, trazendo à baila as "malditas" questões existenciais que o afligiram a vida inteira, com especial relevo para a flagrante degradação moral da humanidade afastada dos ideais cristãos. Cheia de peripécias, a narrativa põe em foco três protagonistas irmãos, representantes dos mais diversos aspectos da realidade russa – o libertino Dmítri, o niilista Ivan e o sublime Aliocha –, a fim de alumiar as profundezas insondáveis do coração entregue ao pecado, corrompido por dúvidas ou transbordante de amor.
-      </p>
+      <p><?php echo $sinopse; ?></p>
 
       <h1 class="detalhesTitulo">Detalhes</h1>
       <div class="divDetalhes">

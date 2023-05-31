@@ -6,10 +6,12 @@ include('../lib/conexao.php');
 <header>
    <nav id="navBar">
       <a href="index.php"><img src="../img/logo.png" alt="" class="logo" width="115px" height="74px"></a>
-      <div class="pesquisa">
-         <input type="search" name="pesquisa" placeholder="Pesquisar" id="txPesquisa">
-         <a href="" class="imgPesquisa"><img src="../img/pesquisa-branco.png" alt="" width="25px"></a>
-      </div>
+      <form action="pesquisa.php" method="get" name="pesquisa">
+         <div class="pesquisa">
+            <input type="search" name="pesquisa" placeholder="Pesquisar" id="txPesquisa">
+            <button type="submit" class="btnPesquisar"><a href="" class="imgPesquisa"><img src="../img/pesquisa-branco.png" alt="" width="25px"></a></button>
+         </div>
+      </form>
       <ul class="menuLista">
          <li id="cadastrarNav" <?php if(isset($_SESSION['usuario'])) {echo "style= 'display: none;'";}?>><a href="registrar.php">Cadastre-se</a></li>
          <li id="loginNav" <?php if(isset($_SESSION['usuario'])) {echo "style= 'display: none;'";}?>><a href="login.php">Login</a></li>
