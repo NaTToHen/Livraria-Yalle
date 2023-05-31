@@ -30,6 +30,7 @@
       </nav>
    </header>
    <?php
+
    if (isset($_GET['livroCadastrado'])) {
       if ($_GET['livroCadastrado'] == 'true') {
          print_r('<div id="cadastrado">
@@ -41,6 +42,34 @@
       if ($_GET['erroLivro'] == 'true') {
          print_r('<div id="naoCadastrado">
                <h1 class="">O livro não foi cadastrado</h1>
+            </div>');
+      }
+   }
+   if (isset($_GET['deletado'])) {
+      if ($_GET['deletado'] == 'userFalse') {
+         print_r('<div id="naoCadastrado">
+               <h1 class="">Erro ao deletar Usuario</h1>
+            </div>');
+      }
+   }
+   if (isset($_GET['deletado'])) {
+      if ($_GET['deletado'] == 'userTrue') {
+         print_r('<div id="cadastrado">
+               <h1 class="">Usuario deletado com sucesso</h1>
+            </div>');
+      }
+   }
+   if (isset($_GET['deletado'])) {
+      if ($_GET['deletado'] == 'livroFalse') {
+         print_r('<div id="naoCadastrado">
+               <h1 class="">Erro ao deletar livro</h1>
+            </div>');
+      }
+   }
+   if (isset($_GET['deletado'])) {
+      if ($_GET['deletado'] == 'livroTrue') {
+         print_r('<div id="cadastrado">
+               <h1 class="">Livro deletado com sucesso</h1>
             </div>');
       }
    }
@@ -123,7 +152,7 @@
                            <td>'.$row['email'].'</td>
                            <td>'.$row['telefone'].'</td>
                            <td class="img-acao"><img src="../img/editar.png"></td>
-                           <td class="img-acao"><img src="../img/deletar.png"></td>
+                           <td class="img-acao"><a href="../lib/deleteUsuario.php?id='.$row['id_user'].'"><img src="../img/deletar.png"></a></td>
                         </tr>';
                         }
                      ?>
@@ -177,8 +206,8 @@
                            <td>'.$row['nome_autor'].'</td>
                            <td>'.$row['nome_editora'].'</td>
                            <td>R$ '.$row['preco'].'.00</td>
-                           <td class="img-acao"><a href="../lib/editarUsuario.php"><img src="../img/editar.png"></a></td>
-                           <td class="img-acao"><img src="../img/deletar.png"></td>
+                           <td class="img-acao"><a href="../lib/editarLivro.php"><img src="../img/editar.png"></a></td>
+                           <td class="img-acao"><a href="../lib/deleteLivro.php?id='.$row['id_livro'].'"><img src="../img/deletar.png"></a></td>
                         </tr>';
                      }
                   ?>
