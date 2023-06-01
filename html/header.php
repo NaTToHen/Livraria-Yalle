@@ -17,8 +17,25 @@ include('../lib/conexao.php');
          <li id="loginNav" <?php if(isset($_SESSION['usuario'])) {echo "style= 'display: none;'";}?>><a href="login.php">Login</a></li>
          <img class="carrinhoImg" src="../img/carrinho.png" alt="" width="50px" height="50px">
          <?php
-            if(isset($_SESSION['usuario'])) {
+         if(isset($_SESSION['usuario'])) {
+            $logado = $_SESSION['usuario'];
+            $sqlNivel = $conn->query("SELECT admin FROM usuario WHERE nome = '$logado'");
+            $nivel = mysqli_fetch_array($sqlNivel);
+         
+            if(isset($_SESSION['usuario']) && $nivel['admin'] == 1) {
               echo 
+              '<li class="dropdown">
+                  <a class="userImg" href="" role="button" data-toggle="dropdown" aria-expanded="false">
+                     <img src="../img/userIcon.png" width="40px" height="40px" >
+                  </a>
+                  <div class="dropdownMenu">
+                     <a class="dropdown-item" href="../lib/usuario.php">Meu perfil</a>
+                     <a class="dropdown-item" href="../html/admin.php">Administração</a>
+                     <a class="dropdown-item" href="../lib/deslogar.php?token='.md5($_SESSION['usuario']).'">Sair</a>
+                  </div>
+               </li>';
+            } else {
+               echo 
               '<li class="dropdown">
                   <a class="userImg" href="" role="button" data-toggle="dropdown" aria-expanded="false">
                      <img src="../img/userIcon.png" width="40px" height="40px" >
@@ -29,7 +46,7 @@ include('../lib/conexao.php');
                   </div>
                </li>';
             }
-            ?>
+         }   ?>
       </ul>
    </nav>
 </header>

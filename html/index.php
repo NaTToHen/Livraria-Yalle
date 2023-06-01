@@ -43,7 +43,7 @@
                         <p id="autor"><?php echo $card['nome_autor']; ?></p>
                         <h1 id="preco">R$<?php echo $card['preco']; ?>.00</h1>
                         <div class="botoes">
-                           <button id="btnComprar">Comprar</button>
+                           <button id="btnComprar"><a href="<?php echo "livro.php?id=$card[id_livro]";?>">Comprar</a></button>
                            <button id="btnCarinhoAdd"><img src="../img/carrinho.png" alt="" width="35px" height="35px"></button>
                         </div>
                      </div>

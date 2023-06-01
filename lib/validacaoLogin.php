@@ -15,9 +15,15 @@
    $row = mysqli_num_rows($result);
    $hash = $result->fetch_assoc();
 
+   $admin = $conn->query("SELECT admin FROM usuario WHERE nome = '$usuario'");
+
    if($row == 1 && password_verify($senha, $hash['senha'])) {
       $_SESSION['usuario'] = $usuario;
-      header('Location: ../html/admin.php');
+      if($admin == 1) {
+         header('Location: ../html/admin.php');
+      } else {
+         header('Location: ../html/index.php');
+      }
       exit();
    } else {
       header('Location: ../html/login.php?erro=true');

@@ -30,7 +30,7 @@ include('../lib/conexao.php');
          <div id="cards">
          <?php 
                   //$cards = $conn->query("SELECT * FROM livro ORDER BY id_livro DESC LIMIT 7");
-                  $cards = $conn->query("SELECT livro.*, autor.nome_autor, editora.nome_editora FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor INNER JOIN editora ON livro.fk_editora = editora.id_editora ORDER BY id_livro DESC LIMIT 7");
+                  $cards = $conn->query("SELECT livro.*, autor.nome_autor, editora.nome_editora FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor INNER JOIN editora ON livro.fk_editora = editora.id_editora ORDER BY id_livro DESC");
                   while ($card = mysqli_fetch_array($cards)) {
                   ?>
                   <div class="card item current-item">

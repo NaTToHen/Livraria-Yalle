@@ -52,7 +52,6 @@ function iniciarTab() {
 }
 iniciarTab();
 
-
 //autor
 $('#formAutor').submit(function(e) {
    e.preventDefault();
@@ -84,3 +83,29 @@ $('#formEditora').submit(function(e) {
       console.log(result);
    });
 });
+
+async function editarUsuario() {
+   
+}
+
+/*function editarUsuario(id) {
+  $.ajax({
+    url: 'http://localhost/livraria%20Yalle/Livraria-Yalle/lib/editarUsuario.php?id=' + id,
+    type: 'get',
+    cache: false,
+    dataType: 'json',
+    success: function (dados) {
+      if (dados.status) {
+        // Reseta o form para evitar conflitos, preenche os campos e chama o modal
+        $('#edit_equipa')[0].reset();
+        $('#editaIdUser').val(id);
+        $('#editaNomeUser').val(dados.nome);
+        $('#editaCpfUser').val(dados.cpf);
+        $('#editaEmailUser').val(dados.email);
+        $('#editaEnderecoUser').val(dados.endereco);
+        $('#editaTelefoneUser').val(dados.telefone);
+        $('#modalUsuario').modal('show');
+      }
+    }
+  });
+}*/
