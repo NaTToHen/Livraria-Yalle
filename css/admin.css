@@ -389,6 +389,94 @@ textarea {
    width: 120px;
 }
 
+/*modal editar usuario*/
+#modalEditarUser {
+   z-index: 10;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 550px;
+   min-height: 400px;
+   background-color: #ffffff;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+   border-radius: 10px;
+   display: none;
+}
+
+#modalEditarUser form {
+   margin-top: 13%;
+}
+
+#modalEditarUser form input, textarea, select {
+   border: 1px solid #a5a5a5;
+   border-radius: 5px;
+   margin: auto;
+   padding: 7px;
+   width: 70%;
+   font-size: 16px;
+   height: 35px;
+   margin-top: 10px;
+   display: flex;
+   outline-width: 1px;
+   outline-color: #f76363;
+}
+
+#modalEditarUser .select-form {
+   background-color: white;
+}
+
+#modalEditarUser .criar {
+   cursor: pointer;
+   margin-top: 25px;
+   float: right;
+   margin-right: 15%;
+   outline: none;
+   border: 1px solid #00b509;
+   color: #00b509;
+   border-radius: 5px;
+   background: none;
+   font-size: 18px;
+   height: 35px;
+   width: 120px;
+}
+
+#modalEditarUser .criar:hover {
+   border-width: 2px;
+}
+
+#modalEditarUser .btnSair {
+   cursor: pointer;
+   background: none;
+   font-size: 20px;
+   color: #ff0000;
+   border: none;
+   float: right;
+   margin-top: 15px;
+   margin-right: 15px;
+   width: 25px;
+   height: 25px;
+   border-radius: 5px;
+}
+
+#modalEditarUser .btnSair:hover, .cancelar:hover, .criar:hover {
+   font-weight: bold;
+}
+
+#modalEditarUser .cancelar {
+   cursor: pointer;
+   margin-top: 25px;
+   float: right;
+   outline: none;
+   border: none;
+   border-radius: 5px;
+   background: none;
+   color: #ff0000;
+   font-size: 18px;
+   height: 35px;
+   width: 120px;
+}
+
 .add-livro:hover {
    font-weight: bold;
 }

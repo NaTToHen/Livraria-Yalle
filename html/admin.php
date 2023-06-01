@@ -9,9 +9,6 @@ $nivel = mysqli_fetch_array($sqlNivel);
 if ($nivel['admin'] != 1) {
    header('Location: ../html/index.php');
 }
-
-$sqlEstoque = "SELECT * FROM estoque ORDER BY id_estoque DESC";
-$resultEstoque = $conn->query($sqlEstoque);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -135,6 +132,19 @@ $resultEstoque = $conn->query($sqlEstoque);
          </form>
       </div>
 
+      <div id="modalEditarUser">
+         <button type="submit" class="btnSair" onclick="fecharModalUser()" name="sair" id="fechar">X</button>
+         <form action="../lib/cadastrarLivro.php" method="POST" enctype="multipart/form-data">
+            <input type="text" class="campo-form" id="nomeUser" placeholder="Nome" name="nome" value="">
+            <input type="text" class="campo-form" id="cpfUser" placeholder="Cpf" name="cpf" value="">
+            <input type="text" class="campo-form" id="emailUser" placeholder="Email" name="email" value="">
+            <input type="text" class="campo-form" id="telefoneUser" placeholder="Telefone" name="telefone" value="">
+            <input type="text" class="campo-form" id="enderecoUser" placeholder="Endereco" name="endereco" value="">
+            <button type="submit" class="criar" name="submit">Editar</button>
+            <button type="button" class="cancelar" onclick="fecharModalUser()" name="sair" id="fechar">Cancelar</button>
+         </form>
+      </div>
+
       <main id="conteudo">
 
          <section id="usuarios">
@@ -163,7 +173,7 @@ $resultEstoque = $conn->query($sqlEstoque);
                            <td>'.$row['cpf'].'</td>
                            <td>'. $row['email'].'</td>
                            <td>'.$row['telefone'].'</td>';
-                     echo "<td class='img-acao'><a href='#' id='btnEditarUser' onclick='editarUsuario($idUser)'><img src='../img/editar.png'></a></td>";
+                     echo "<td class='img-acao'><a href='#' id='btnEditarUser' onclick='abrirModalUser($idUser)'><img src='../img/editar.png'></a></td>";
                      echo '<td class="img-acao"><a href="../lib/deleteUsuario.php?id=' . $row['id_user'] . '"><img src="../img/deletar.png"></a></td>
                         </tr>';
                   }
