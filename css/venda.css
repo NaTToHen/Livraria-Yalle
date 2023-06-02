@@ -1,0 +1,42 @@
+main {
+   margin: auto;
+   margin-top: 50px;
+   padding: 20px;
+   width: 80%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: #F5F5F5;
+   border-radius: 15px;
+}
+
+#infoLivro {
+   margin-left: -50%;
+}
+
+.autorLivro, .codigoLivro {
+   color: #a5a5a5;
+}
+
+#precoLivro {
+   margin-left: 15%;
+   color: #f76363;
+}
+
+.btnComprar {
+   margin-top: 10px;
+   color: white;
+   background-color: #f76363;
+   width: 160px;
+   height: 40px;
+   border-radius: 8px;
+   font-size: 17px;
+   border: none !important;
+  cursor: pointer; 
+}
+
+a {
+   text-decoration: none !important;
+   color: white;
+}
+

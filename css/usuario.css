@@ -1,0 +1,80 @@
+main {
+   margin-top: 50px;
+}
+
+#infoUsuario {
+   margin-bottom: 70px;
+} 
+
+#infoUsuario input {
+      border: 1px solid #a5a5a5;
+      border-radius: 5px;
+      margin: auto;
+      padding: 7px;
+      width: 50%;
+      font-size: 16px;
+      height: 35px;
+      display: flex;
+      outline-width: 1px;
+      outline-color: #f76363;
+}
+
+#infoUsuario label {
+      border-radius: 5px;
+      margin: auto;
+      padding: 7px;
+      width: 50%;
+      font-size: 16px;
+      height: 35px;
+      margin-top: 10px;
+      display: flex;
+      outline-width: 1px;
+      outline-color: #f76363;
+}
+
+
+.infoTitulo {
+   width: 50%;
+   margin: auto;
+}
+
+.infoCompra {
+   width: 60%;
+   margin: auto;
+   margin-bottom: 25px;
+}
+
+.compras {
+   width: 60%;
+   margin: auto;
+   margin-bottom: 50px;
+   background-color: #F5F5F5;
+   padding: 20px;
+   padding-top: 5px;
+}
+
+.compra {
+   color: #777777;
+   margin-top: 20px;
+   align-items: center;
+   justify-content: space-between;
+   display: flex;
+}
+
+.nomeLivro, #precoLivro {
+   font-size: 20px;
+   font-weight: normal;
+}
+
+.nomeLivro {
+   margin-left: -13%;
+}
+
+.valorTotal {
+   text-align: end;
+   margin: auto;
+   margin-top: 10px;
+   font-weight: normal !important;
+   color: #777777;
+   font-size: 20px;
+}

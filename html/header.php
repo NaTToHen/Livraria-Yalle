@@ -29,7 +29,7 @@ include('../lib/conexao.php');
                      <img src="../img/userIcon.png" width="40px" height="40px" >
                   </a>
                   <div class="dropdownMenu">
-                     <a class="dropdown-item" href="../lib/usuario.php">Meu perfil</a>
+                     <a class="dropdown-item" href="usuario.php">Meu perfil</a>
                      <a class="dropdown-item" href="../html/admin.php">Administração</a>
                      <a class="dropdown-item" href="../lib/deslogar.php?token='.md5($_SESSION['usuario']).'">Sair</a>
                   </div>
@@ -41,7 +41,7 @@ include('../lib/conexao.php');
                      <img src="../img/userIcon.png" width="40px" height="40px" >
                   </a>
                   <div class="dropdownMenu">
-                     <a class="dropdown-item" href="../lib/usuario.php">Meu perfil</a>
+                     <a class="dropdown-item" href="usuario.php">Meu perfil</a>
                      <a class="dropdown-item" href="../lib/deslogar.php?token='.md5($_SESSION['usuario']).'">Sair</a>
                   </div>
                </li>';

@@ -242,7 +242,7 @@ if ($nivel['admin'] != 1) {
                            <td>' . $row['nome_autor'] . '</td>
                            <td>' . $row['nome_editora'] . '</td>
                            <td>R$ ' . $row['preco'] . '.00</td>
-                           <td class="img-acao"><a href="../lib/editarLivro.php"><img src="../img/editar.png"></a></td>
+                           <td class="img-acao"><a href="../lib/editarLivro.php"><img src="../img/editar-cinza.png"></a></td>
                            <td class="img-acao"><a href="../lib/deleteLivro.php?id=' . $row['id_livro'] . '"><img src="../img/deletar.png"></a></td>
                         </tr>';
                   }
