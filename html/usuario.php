@@ -5,6 +5,7 @@
    $logado = $_SESSION['usuario'];
    $sqlUsuario = "SELECT * FROM usuario WHERE nome='$logado'";
    $usuario = $conn->query($sqlUsuario);
+
    while ($info = $usuario->fetch_array()) {
       $usuarioId = $info['id_user'];
       $nomeUser = $info['nome'];
@@ -15,16 +16,7 @@
    }
       $sqlVenda = "SELECT venda.*, livro.* FROM venda INNER JOIN livro ON venda.fk_livro = livro.id_livro INNER JOIN usuario ON venda.fk_cliente = usuario.id_user WHERE fk_cliente=usuario.id_user AND id_user=$usuarioId";
       $venda = $conn->query($sqlVenda);
-
       $valorTotal = 0;
-      
-      //while ($item = $venda->fetch_array()) {
-         //$path = $item['pathFoto'];
-         //$nome = $item['nome'];
-         //$preco = $item['preco'];
-         //$valor = $item['valor'];
-         //$idLivro = $item['id_livro'];
-      //}
 ?>
 
 <!DOCTYPE html>
@@ -71,11 +63,11 @@
                $valorTotal = $valorTotal+ $item['valor'];
             ?>
             <div class="compra">
-                  <p class="codVenda">COD: 0<?php echo $item['id_venda']; ?></p>
-                  <img src="<?php echo $item['pathFoto']; ?>" alt="" width="50px">
-                  <h1 class="nomeLivro"><?php echo $item['nome'] ?></h1>
-                  <p class="codLivro">COD. Livro: 0<?php echo $item['id_livro']; ?></p>
-                  <h1 id="precoLivro">R$ <?php echo $item['valor']; ?>.00</h1>
+               <p class="codVenda">COD: 0<?php echo $item['id_venda']; ?></p>
+               <img src="<?php echo $item['pathFoto']; ?>" alt="" width="50px">
+               <h1 class="nomeLivro"><?php echo $item['nome'] ?></h1>
+               <p class="codLivro">COD. Livro: 0<?php echo $item['id_livro']; ?></p>
+               <h1 id="precoLivro">R$ <?php echo $item['valor']; ?>.00</h1>
             </div>
             <?php } ?>
             <hr>

@@ -1,7 +1,6 @@
 <?php
-   if(!empty($_GET['comprado']))
-   {
-      session_start();
+   session_start();
+   if(!empty($_GET['comprado']) && isset($_SESSION['usuario'])) {
       include("../lib/conexao.php");
 
       $id = $_GET['comprado'];
@@ -22,7 +21,9 @@
       } else {
         echo "erro";
       }
-    }
+   } else {
+      header('Location: index.php?logado=false');
+   }
 ?>
 
 <!DOCTYPE html>

@@ -15,7 +15,7 @@ include('../lib/conexao.php');
       <ul class="menuLista">
          <li id="cadastrarNav" <?php if(isset($_SESSION['usuario'])) {echo "style= 'display: none;'";}?>><a href="registrar.php">Cadastre-se</a></li>
          <li id="loginNav" <?php if(isset($_SESSION['usuario'])) {echo "style= 'display: none;'";}?>><a href="login.php">Login</a></li>
-         <img class="carrinhoImg" src="../img/carrinho.png" alt="" width="50px" height="50px">
+         <!--<img class="carrinhoImg" src="../img/carrinho.png" alt="" width="50px" height="50px">-->
          <?php
          if(isset($_SESSION['usuario'])) {
             $logado = $_SESSION['usuario'];

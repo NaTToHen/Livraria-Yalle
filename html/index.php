@@ -15,6 +15,23 @@
    <title>Inicio - Yalle</title>
 </head>
 <body>
+
+   <?php
+   if (isset($_GET['logado'])) {
+      if ($_GET['logado'] == 'false') {
+         print_r('<div id="naoVendido">
+               <h1 class="">voce não esta logado</h1>
+            </div>');
+      }
+   }
+   if (isset($_GET['venda'])) {
+      if ($_GET['venda'] == 'true') {
+         print_r('<div id="vendido">
+               <h1 class="">Compra efetuada com sucesso!!</h1>
+            </div>');
+      }
+   }
+   ?>
    
    <script src="https://www.w3schools.com/lib/w3.js"></script>
    <body>
@@ -49,78 +66,6 @@
                      </div>
                   </div>
                   <?php } ?>
-                  <!--<div class="card item">
-                     <div class="conteudoCard">
-                        <img src="../img/livro.png" alt="">
-                        <h2 id="nomeLivro">teste</h2>
-                        <p id="autor">autor</p>
-                        <h1 id="preco">R$ 35,99</h1>
-                        <div class="botoes">
-                           <button id="btnComprar">Comprar</button>
-                           <button id="btnCarinhoAdd"><img src="../img/carrinho.png" alt="" width="35px" height="35px"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="card item">
-                     <div class="conteudoCard">
-                        <img src="../img/livro.png" alt="">
-                        <h2 id="nomeLivro">teste</h2>
-                        <p id="autor">autor</p>
-                        <h1 id="preco">R$ 35,99</h1>
-                        <div class="botoes">
-                           <button id="btnComprar">Comprar</button>
-                           <button id="btnCarinhoAdd"><img src="../img/carrinho.png" alt="" width="35px" height="35px"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="card item">
-                     <div class="conteudoCard">
-                        <img src="../img/livro.png" alt="">
-                        <h2 id="nomeLivro">teste</h2>
-                        <p id="autor">autor</p>
-                        <h1 id="preco">R$ 35,99</h1>
-                        <div class="botoes">
-                           <button id="btnComprar">Comprar</button>
-                           <button id="btnCarinhoAdd"><img src="../img/carrinho.png" alt="" width="35px" height="35px"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="card item">
-                     <div class="conteudoCard">
-                        <img src="../img/livro.png" alt="">
-                        <h2 id="nomeLivro">teste</h2>
-                        <p id="autor">autor</p>
-                        <h1 id="preco">R$ 35,99</h1>
-                        <div class="botoes">
-                           <button id="btnComprar">Comprar</button>
-                           <button id="btnCarinhoAdd"><img src="../img/carrinho.png" alt="" width="35px" height="35px"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="card item">
-                     <div class="conteudoCard">
-                        <img src="../img/livro.png" alt="">
-                        <h2 id="nomeLivro">teste</h2>
-                        <p id="autor">autor</p>
-                        <h1 id="preco">R$ 35,99</h1>
-                        <div class="botoes">
-                           <button id="btnComprar">Comprar</button>
-                           <button id="btnCarinhoAdd"><img src="../img/carrinho.png" alt="" width="35px" height="35px"></button>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="card item">
-                     <div class="conteudoCard">
-                        <img src="../img/livro.png" alt="">
-                        <h2 id="nomeLivro">teste</h2>
-                        <p id="autor">autor</p>
-                        <h1 id="preco">R$ 35,99</h1>
-                        <div class="botoes">
-                           <button id="btnComprar">Comprar</button>
-                           <button id="btnCarinhoAdd"><img src="../img/carrinho.png" alt="" width="35px" height="35px"></button>
-                        </div>
-                     </div>
-                  </div>-->
                </div>
             </div>
          </div>
@@ -131,6 +76,15 @@
    </main>
 
    <script src="../js/index.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script>
+      setTimeout(function() {
+         $('#vendido').fadeOut('fast');
+      }, 5000);
 
+      setTimeout(function() {
+         $('#naoVendido').fadeOut('fast');
+      }, 5000);
+   </script>
 </body>
 </html>
