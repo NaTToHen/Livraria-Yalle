@@ -36,6 +36,7 @@ function loadData(id) {
      if (this.readyState == 4 && this.status == 200) {
        var data = JSON.parse(this.responseText);
        console.log(this.responseText);
+       document.querySelector("#idUser").value = data.id;
        document.querySelector("#nomeUser").value = data.nome;
        document.querySelector("#emailUser").value = data.email;
        document.querySelector("#cpfUser").value = data.cpf;

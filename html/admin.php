@@ -80,6 +80,20 @@ if ($nivel['admin'] != 1) {
             </div>');
       }
    }
+   if (isset($_GET['alterado'])) {
+      if ($_GET['alterado'] == 'false') {
+         print_r('<div id="naoCadastrado">
+               <h1 class="">Erro ao alterar o usuario</h1>
+            </div>');
+      }
+   }
+   if (isset($_GET['alterado'])) {
+      if ($_GET['alterado'] == 'true') {
+         print_r('<div id="cadastrado">
+               <h1 class="">Usuario alterado com sucesso</h1>
+            </div>');
+      }
+   }
    ?>
 
    <div id="fundoModal"></div>
@@ -134,7 +148,8 @@ if ($nivel['admin'] != 1) {
 
       <div id="modalEditarUser">
          <button type="submit" class="btnSair" onclick="fecharModalUser()" name="sair" id="fechar">X</button>
-         <form action="../lib/cadastrarLivro.php" method="POST" enctype="multipart/form-data">
+         <form action="../lib/insereUsuario.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" class="campo-form" id="idUser" placeholder="Nome" name="id" value="">
             <input type="text" class="campo-form" id="nomeUser" placeholder="Nome" name="nome" value="">
             <input type="text" class="campo-form" id="cpfUser" placeholder="Cpf" name="cpf" value="">
             <input type="text" class="campo-form" id="emailUser" placeholder="Email" name="email" value="">
@@ -146,7 +161,6 @@ if ($nivel['admin'] != 1) {
       </div>
 
       <main id="conteudo">
-
          <section id="usuarios">
             <table>
                <thead>
@@ -171,7 +185,7 @@ if ($nivel['admin'] != 1) {
                            <td>'.$row['id_user'].'</td>
                            <td>'.$row['nome'].'</td>
                            <td>'.$row['cpf'].'</td>
-                           <td>'. $row['email'].'</td>
+                           <td>'.$row['email'].'</td>
                            <td>'.$row['telefone'].'</td>';
                      echo "<td class='img-acao'><a href='#' id='btnEditarUser' onclick='abrirModalUser($idUser)'><img src='../img/editar.png'></a></td>";
                      echo '<td class="img-acao"><a href="../lib/deleteUsuario.php?id=' . $row['id_user'] . '"><img src="../img/deletar.png"></a></td>

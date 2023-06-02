@@ -408,7 +408,7 @@ textarea {
    margin-top: 13%;
 }
 
-#modalEditarUser form input, textarea, select {
+#modalEditarUser form input, textarea {
    border: 1px solid #a5a5a5;
    border-radius: 5px;
    margin: auto;

@@ -18,6 +18,7 @@ if(isset($_GET['id'])) {
             $endereco = $row['endereco_user'];
         }
          $data = array(
+            'id' => $id,
             'nome' => $nome,
             'email' => $email,
             'cpf' => $cpf,
