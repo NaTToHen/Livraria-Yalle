@@ -94,6 +94,21 @@ if ($nivel['admin'] != 1) {
             </div>');
       }
    }
+   if (isset($_GET['alteradoLivro'])) {
+      if ($_GET['alteradoLivro'] == 'false') {
+         print_r('<div id="naoCadastrado">
+               <h1 class="">Erro ao alterar o livro</h1>
+            </div>');
+      }
+   }
+   if (isset($_GET['alteradoLivro'])) {
+      if ($_GET['alteradoLivro'] == 'true') {
+         print_r('<div id="cadastrado">
+               <h1 class="">Livro Alterado com sucesso!!</h1>
+            </div>');
+      }
+   }
+   
    ?>
 
    <div id="fundoModal"></div>
@@ -143,6 +158,20 @@ if ($nivel['admin'] != 1) {
 
             <button type="submit" class="criar" name="submit">Criar Livro</button>
             <button type="button" class="cancelar" onclick="fecharModalLivro()" name="sair" id="fechar">Cancelar</button>
+         </form>
+      </div>
+
+      <div id="modalEditarLivro">
+         <button type="submit" class="btnSair" onclick="fecharModalEditarLivro()" name="sair" id="fechar">X</button>
+         <form action="../lib/insereLivro.php" method="POST" enctype="multipart/form-data">
+            <input type="hidden" class="campo-form" id="idLivro" placeholder="Nome" name="id" value="">
+            <input type="text" class="campo-form" id="nomeLivro" placeholder="Nome" name="nome" value="">
+            <div class="selectDiv">
+            </div>
+            <textarea class="campo-form" id="sinopseLivro" name="sinopse" placeholder="sinopse"></textarea>
+            <input type="text" class="campo-form" id="precoLivro" placeholder="Preço" name="preco" value="">
+            <button type="submit" class="criar" name="submit">Editar Livro</button>
+            <button type="button" class="cancelar" onclick="fecharModalEditarLivro()" name="sair" id="fecharEditarLivro">Cancelar</button>
          </form>
       </div>
 
@@ -242,7 +271,7 @@ if ($nivel['admin'] != 1) {
                            <td>' . $row['nome_autor'] . '</td>
                            <td>' . $row['nome_editora'] . '</td>
                            <td>R$ ' . $row['preco'] . '.00</td>
-                           <td class="img-acao"><a href="../lib/editarLivro.php"><img src="../img/editar-cinza.png"></a></td>
+                           <td class="img-acao"><a href="#" onclick="abrirModalEditarLivro('.$row['id_livro'].')"><img src="../img/editar.png"></a></td>
                            <td class="img-acao"><a href="../lib/deleteLivro.php?id=' . $row['id_livro'] . '"><img src="../img/deletar.png"></a></td>
                         </tr>';
                   }

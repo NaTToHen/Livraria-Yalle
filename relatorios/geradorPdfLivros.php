@@ -1,7 +1,7 @@
 <?php
 include('../lib/conexao.php');
 require __DIR__ . '\vendor\autoload.php';
-$sqllivro = "SELECT livro.*, autor.nome_autor, editora.nome_editora FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor INNER JOIN editora ON livro.fk_editora = editora.id_editora";
+$sqllivro = "SELECT livro.*, autor.nome_autor, editora.nome_editora FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor INNER JOIN editora ON livro.fk_editora = editora.id_editora ORDER BY id_livro ASC";
 $resultlivro = mysqli_query($conn, $sqllivro);
 
 date_default_timezone_set('America/Sao_Paulo');
@@ -96,9 +96,11 @@ while ($row = mysqli_fetch_array($resultlivro)) {
 	$html .= '</table>';
 
 use Dompdf\Dompdf;
+
 $dompdf = new Dompdf();
 $dompdf->loadHtml($html);
 $dompdf->render();
+
 header('Content-Type: application/pdf');
 $dompdf->stream(
    "relatorioLivros.pdf", 

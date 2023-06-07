@@ -1,10 +1,11 @@
 const modal = document.querySelector('#modalLivro');
+const modalUser = document.querySelector('#modalEditarUser');
+const modalEditarLivro = document.querySelector('#modalEditarLivro');
+
 const fundomodal = document.querySelector('#fundoModal');
 
 const criarAutor = document.querySelector('.criarAutor');
 const criarEditora = document.querySelector('.criarEditora');
-
-const modalUser = document.querySelector('#modalEditarUser');
 
 //autor
 function abrirFecharAddAutor() {
@@ -14,6 +15,7 @@ function abrirFecharAddAutor() {
       criarAutor.style.display = 'none';
    }
 }
+//editora
 function abrirFecharAddEditora() {
    if(criarEditora.style.display == 'none') {
       criarEditora.style.display = 'block';
@@ -21,6 +23,7 @@ function abrirFecharAddEditora() {
       criarEditora.style.display = 'none';
    }
 }
+//modal do add livro
 function abrirModalLivro() {
    modal.style.display = 'block';
    fundomodal.style.display = 'block';
@@ -30,6 +33,7 @@ function fecharModalLivro() {
    fundomodal.style.display = 'none';
 }
 
+//carrega dados do editar usuario
 function loadData(id) {
    var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function() {
@@ -44,9 +48,38 @@ function loadData(id) {
        document.querySelector("#enderecoUser").value = data.endereco;
      }
    };
-   xhttp.open("GET", "editarUsuario.php?id="+id, true);
-   xhttp.send();
- }
+   xhttp.open("GET", "editarUsuario.php?id="+id, true);//executa o arquivo
+   xhttp.send();//envia os dados?
+}
+
+
+
+
+function abrirModalEditarLivro(id) {
+   modalEditarLivro.style.display = 'block';
+   fundomodal.style.display = 'block';
+   loadDataLivro(id);
+}
+function fecharModalEditarLivro() {
+   modalEditarLivro.style.display = 'none';
+   fundomodal.style.display = 'none';
+}
+
+function loadDataLivro(id) {
+   var xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function() {
+     if (this.readyState == 4 && this.status == 200) {
+       var data = JSON.parse(this.responseText);
+       console.log(this.responseText);
+       document.querySelector("#idLivro").value = data.id;
+       document.getElementById("nomeLivro").value = data.nome;
+       document.querySelector("#precoLivro").value = data.preco;
+       document.querySelector("#sinopseLivro").textContent = data.sinopse;
+     }
+   };
+   xhttp.open("GET", "editarLivro.php?id="+id, true);//executa o arquivo
+   xhttp.send();//envia os dados?
+}
 
 //modal editarUsuario
 function abrirModalUser(id) {
@@ -86,7 +119,6 @@ $('#formAutor').submit(function(e) {
    e.preventDefault();
 
    var autorNome = $('#autorNome').val();
-   console.log(autorNome);
    $.ajax({
       url: '../lib/insereAutor.php',
       method: 'POST',
@@ -112,26 +144,3 @@ $('#formEditora').submit(function(e) {
       console.log(result);
    });
 });
-
-
-/*function editarUsuario(id) {
-  $.ajax({
-    url: 'http://localhost/livraria%20Yalle/Livraria-Yalle/lib/editarUsuario.php?id=' + id,
-    type: 'get',
-    cache: false,
-    dataType: 'json',
-    success: function (dados) {
-      if (dados.status) {
-        // Reseta o form para evitar conflitos, preenche os campos e chama o modal
-        $('#edit_equipa')[0].reset();
-        $('#editaIdUser').val(id);
-        $('#editaNomeUser').val(dados.nome);
-        $('#editaCpfUser').val(dados.cpf);
-        $('#editaEmailUser').val(dados.email);
-        $('#editaEnderecoUser').val(dados.endereco);
-        $('#editaTelefoneUser').val(dados.telefone);
-        $('#modalUsuario').modal('show');
-      }
-    }
-  });
-}*/

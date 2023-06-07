@@ -20,7 +20,7 @@
    if (isset($_GET['logado'])) {
       if ($_GET['logado'] == 'false') {
          print_r('<div id="naoVendido">
-               <h1 class="">voce não esta logado</h1>
+               <h1 class="">Voce não esta logado</h1>
             </div>');
       }
    }
@@ -32,7 +32,7 @@
       }
    }
    ?>
-   
+
    <script src="https://www.w3schools.com/lib/w3.js"></script>
    <body>
    <div w3-include-html="header.php"></div> 
