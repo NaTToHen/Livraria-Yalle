@@ -214,14 +214,14 @@
    margin-top: 10%;
 }
 
-textarea {
+#modalLivro textarea {
    max-width: 60%;
    min-width: 60%;
    min-height: 150px;
    max-height: 150px;
 }
 
-#modalLivro form input, textarea, select, #modalEditarLivro input, textarea, select {
+#modalLivro form input, textarea, select {
    border: 1px solid #a5a5a5;
    border-radius: 5px;
    margin: auto;
@@ -484,17 +484,37 @@ textarea {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   width: 700px;
+   width: 600px;
    min-height: 480px;
-   max-height: 580px;
    background-color: #ffffff;
    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
    border-radius: 10px;
    display: none;
 }
 
+#modalEditarLivro input, select, textarea {
+   border: 1px solid #a5a5a5;
+   border-radius: 5px;
+   margin: auto;
+   padding: 7px;
+   width: 70%;
+   font-size: 16px;
+   height: 35px;
+   margin-top: 10px;
+   display: flex;
+   outline-width: 1px;
+   outline-color: #f76363;
+}
+
+#modalEditarLivro textarea {
+   max-width: 70%;
+   min-width: 60%;
+   min-height: 150px;
+   max-height: 150px;
+}
+
 #modalEditarLivro form {
-   margin-top: 50px;
+   margin-top: 100px;
 }
 
 #modalEditarLivro .select-form {
@@ -505,7 +525,7 @@ textarea {
    cursor: pointer;
    margin-top: 25px;
    float: right;
-   margin-right: 20%;
+   margin-right: 15%;
    outline: none;
    border: 1px solid #00b509;
    color: #00b509;

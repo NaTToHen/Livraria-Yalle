@@ -1,6 +1,7 @@
 <?php
 include('../lib/conexao.php');
 require __DIR__ . '\vendor\autoload.php';
+
 $sqllivro = "SELECT livro.*, autor.nome_autor, editora.nome_editora FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor INNER JOIN editora ON livro.fk_editora = editora.id_editora ORDER BY id_livro ASC";
 $resultlivro = mysqli_query($conn, $sqllivro);
 
@@ -71,18 +72,18 @@ echo $dataAtual;
       <h2>Livraria Yalle</h2>
       <h1>Relatório de livros cadastrados</h1>
       <p>'. $dataAtual .'</p>
-   </div>';
-   $html .= '<table border=1>';	
-	$html .= '<thead>';
-	$html .= '<tr>';
-	$html .= '<th>ID</th>';
-	$html .= '<th>Nome</th>';
-	$html .= '<th>Autor</th>';
-	$html .= '<th>Editora</th>';
-	$html .= '<th>Preço</th>';;
-	$html .= '</tr>';
-	$html .= '</thead>';
-	$html .= '<tbody>';
+   </div>
+   <table border=1>
+	<thead>
+      <tr>
+         <th>ID</th>
+         <th>Nome</th>
+         <th>Autor</th>
+         <th>Editora</th>
+         <th>Preço</th>
+      </tr>
+	</thead>
+	<tbody>';
 while ($row = mysqli_fetch_array($resultlivro)) {
    $html .= '<tr>';
       $html .= '<td>'.$row['id_livro']."</td>";

@@ -52,9 +52,7 @@ function loadData(id) {
    xhttp.send();//envia os dados?
 }
 
-
-
-
+//editar livro modal
 function abrirModalEditarLivro(id) {
    modalEditarLivro.style.display = 'block';
    fundomodal.style.display = 'block';
@@ -65,6 +63,7 @@ function fecharModalEditarLivro() {
    fundomodal.style.display = 'none';
 }
 
+//busca do banco os valores e insere no .value dos inputs
 function loadDataLivro(id) {
    var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function() {
@@ -81,7 +80,7 @@ function loadDataLivro(id) {
    xhttp.send();//envia os dados?
 }
 
-//modal editarUsuario
+//modal editar usuario
 function abrirModalUser(id) {
    modalUser.style.display = 'block';
    fundomodal.style.display = 'block';

@@ -94,7 +94,8 @@ header {
    border-radius: 6px;
 }
 
-.menuLista img{
+.menuLista img {
+   margin-top: 10px;
    margin-left: 5px;
    cursor: pointer;
 }
@@ -134,7 +135,7 @@ li a:hover {
    margin-right: 20px;
 }
 
-.dropdown:hover .dropdownMenu{
+.dropdown:hover .dropdownMenu {
    display: block;
 }
 

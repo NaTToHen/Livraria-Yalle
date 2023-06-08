@@ -281,7 +281,6 @@ if ($nivel['admin'] != 1) {
          </section>
 
          <section id="estoque">
-            estoqie
          </section>
 
          <section id="fornecedoras">
