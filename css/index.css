@@ -3,6 +3,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
 /* Conteudo */
 
+.livroDestaque {
+   display: flex;
+}
+
+.livroDestaque img {
+   max-height: 430px;
+   border-radius: 15px;
+   margin-left: 10%;
+   margin-top: 1.5%;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.slideTexto {
+   width: 55%;
+   display: flex;
+   flex-direction: column;
+   margin-left: 30px;
+   margin-right: 30px;
+}
+
+.livroNome {
+   align-self: start;
+   margin-top: 60px;
+   font-size: 70px;
+   font-weight: bold;
+}
+
+.livroAutor {
+   align-self: start;
+   color: #989898;
+   font-size: 35px;
+}
+
+.livroEditora {
+   align-self: start;
+   color: #989898;
+   font-size: 35px;
+}
+
+.livroPreco {
+   margin-top: 40px;
+   align-self: end;
+   color: #FF5050;
+   font-size: 50px;
+   font-weight: bold;
+}
+
+.btnComprarSlide1 {
+   align-self: end;
+   width: 250px;
+   border-radius: 10px;
+   background-color: #FF5050;
+   border: none;
+   font-size: 35px;
+   height: 60px;
+}
+
+.btnComprarSlide1 a {
+   color: white;
+}
+
+.slider-wrapper {
+   margin: 1rem;
+   position: relative;
+   overflow: hidden;
+   margin: auto;
+}
+
+.slides-container {
+   height: 470px;
+   width: 90%;
+   display: flex;
+   overflow: scroll;
+   scroll-behavior: smooth;
+   list-style: none;
+   margin: auto;
+   padding: 0;
+}
+
+.slides-container::-webkit-scrollbar {
+   display: none;
+}
+
+.slide-arrow {
+   position: absolute;
+   display: flex;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   height: 4rem;
+   border: none;
+   width: 2rem;
+   font-size: 3rem;
+   padding: 0;
+   cursor: pointer;
+   opacity: 1;
+   transition: opacity 100ms;
+   background: none;
+}
+
+.slide-arrow:hover,
+.slide-arrow:focus {
+   transition: 0.5s;
+   transform: scale(1.1);
+}
+
+#slide-arrow-prev {
+   left: 10%;
+   padding-left: 0.25rem;
+}
+
+#slide-arrow-next {
+   right: 10%;
+   padding-left: 0.75rem;
+}
+
+.slide {
+   margin: auto;
+   width: 100%;
+   height: 100%;
+   flex: 1 0 100%;
+}
+
 .slides {
    margin-top: -18px;
    background-color: #dddddd;
@@ -139,7 +262,8 @@ main {
    height: 260px;
 }
 
-.conteudoCard h2, p {
+.conteudoCard h2,
+p {
    text-align: center;
 }
 
@@ -186,7 +310,7 @@ main {
    font-size: 20px;
    background-color: #000000;
    border: none !important;
-   color:#dddddd;
+   color: #dddddd;
 }
 
 #btnCarinhoAdd {
@@ -215,8 +339,15 @@ main {
 }
 
 @keyframes example {
-  0%   {left:50%; top:80px;}
-  100%  {left:78%; top:80px;}
+   0% {
+      left: 50%;
+      top: 80px;
+   }
+
+   100% {
+      left: 78%;
+      top: 80px;
+   }
 }
 
 
@@ -239,8 +370,15 @@ main {
 }
 
 @keyframes example2 {
-  0%   {left:50%; top:80px;}
-  100%  {left:84%; top:80px;}
+   0% {
+      left: 50%;
+      top: 80px;
+   }
+
+   100% {
+      left: 84%;
+      top: 80px;
+   }
 }
 
 

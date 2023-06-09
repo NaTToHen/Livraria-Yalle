@@ -1,3 +1,21 @@
+//slide 1
+const slidesContainer = document.getElementById("slides-container");
+const slide = document.querySelector(".slide");
+const prevButton = document.getElementById("slide-arrow-prev");
+const nextButton = document.getElementById("slide-arrow-next");
+
+nextButton.addEventListener("click", () => {
+   const slideWidth = slide.clientWidth;
+   slidesContainer.scrollLeft += slideWidth;
+});
+
+prevButton.addEventListener("click", () => {
+   const slideWidth = slide.clientWidth;
+   slidesContainer.scrollLeft -= slideWidth;
+});
+
+
+//slide 2
 function newsSlide() {
    const controls = document.querySelectorAll('.control');
    let currentItem = 0;
@@ -7,16 +25,16 @@ function newsSlide() {
    controls.forEach(function (control) {
       control.addEventListener('click', () => {
          const isLeft = control.classList.contains('flechaEsquerda');
-         
-         if(isLeft) {
+
+         if (isLeft) {
             currentItem -= 1;
          } else {
             currentItem += 1;
          }
-         if(currentItem >= maxItens) { 
+         if (currentItem >= maxItens) {
             currentItem = 0;
          }
-         if(currentItem < 0) {
+         if (currentItem < 0) {
             currentItem = 0;
          }
 
@@ -32,5 +50,4 @@ function newsSlide() {
       });
    });
 }
-
 newsSlide();
