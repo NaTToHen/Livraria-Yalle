@@ -13,6 +13,11 @@ session_start();
    <link rel="stylesheet" href="../css/header.css">
    <link rel="stylesheet" href="../css/index.css">
    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!--GOOGLE FONTS-->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
    <title>Inicio - Yalle</title>
 </head>
 
@@ -53,20 +58,23 @@ session_start();
                   <img src="../img/direita.png" alt="">
                </button>
                <ul class="slides-container" id="slides-container">
-                  <?php 
+                  <?php
                   $cards = $conn->query("SELECT livro.*, autor.nome_autor, editora.nome_editora FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor INNER JOIN editora ON livro.fk_editora = editora.id_editora ORDER BY id_livro DESC LIMIT 4");
                   while ($card = mysqli_fetch_array($cards)) {
                   ?>
-                  <li class="slide"><div class="livroDestaque">
-                     <img src="<?php echo $card['pathFoto'] ?>" width="300px">
-                     <div class="slideTexto">
-                        <p class="livroNome"><?php echo $card['nome'] ?></p>
-                        <p class="livroAutor"><?php echo $card['nome_autor'] ?></p>
-                        <p class="livroEditora"><?php echo $card['nome_editora'] ?></p>
-                        <p class="livroPreco">R$ <?php echo $card['preco'] ?>,00</p>
-                        <button class="btnComprarSlide1"><a href="<?php echo "livro.php?id=$card[id_livro]"; ?>">Comprar</a></button>
-                     </div>
-                  </div></li>
+                     <li class="slide">
+                        <div class="livroDestaque">
+                           <img src="<?php echo $card['pathFoto'] ?>" width="300px">
+                           <div class="slideTexto">
+                              <p class="livroNome"><?php echo $card['nome'] ?></p>
+                              <p class="livroAutor"><?php echo $card['nome_autor'] ?></p>
+                              <p class="livroEditora"><?php echo $card['nome_editora'] ?></p>
+                              <p class="precoDesconto"><s>R$ <?php echo $card['preco'] + 25 ?>,99</s></p>
+                              <p class="livroPreco">R$ <?php echo $card['preco'] ?>,00</p>
+                              <button class="btnComprarSlide1"><a href="<?php echo "livro.php?id=$card[id_livro]"; ?>">Comprar</a></button>
+                           </div>
+                        </div>
+                     </li>
                   <?php } ?>
                </ul>
             </section>
@@ -101,9 +109,31 @@ session_start();
             </div>
 
             <div class="slide2">
-
+               <?php
+               $cards = $conn->query("SELECT livro.*, autor.nome_autor, editora.nome_editora FROM livro INNER JOIN autor ON livro.fk_autor = autor.id_autor INNER JOIN editora ON livro.fk_editora = editora.id_editora WHERE id_livro=18");
+               while ($card = mysqli_fetch_array($cards)) {
+               ?>
+                  <li class="slide">
+                     <div class="livroDestaqueSlide2">
+                        <img src="../img/livro destaque.png" width="">
+                        <div class="slideTexto">
+                           <p class="livroNome"><?php echo $card['nome'] ?></p>
+                           <p class="livroAutor"><?php echo $card['nome_autor'] ?></p>
+                           <p class="livroEditora"><?php echo $card['nome_editora'] ?></p>
+                           <p class="precoDescontoSlide2"><s>R$ <?php echo $card['preco'] + 25 ?>,99</s></p>
+                           <p class="livroPrecoSlide2">R$ <?php echo $card['preco'] ?>,00</p>
+                           <button class="btnComprarSlide2"><a href="<?php echo "livro.php?id=$card[id_livro]"; ?>">Comprar</a></button>
+                        </div>
+                     </div>
+                  </li>
+               <?php } ?>
             </div>
       </main>
+
+      <div w3-include-html="footer.php"></div>
+      <script>
+         w3.includeHTML();
+      </script>
 
       <script src="../js/index.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

@@ -157,6 +157,11 @@ main {
    margin: auto;
 }
 
+#destaques {
+   height: 280vh;
+   margin-bottom: 90px;
+}
+
 /*
 .conteudoCard img {
    margin-top: 10px;

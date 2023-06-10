@@ -32,6 +32,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../css/header.css">
    <link rel="stylesheet" href="../css/livro.css">
+   <link rel="stylesheet" href="../css/footer.css">
+   <link rel="stylesheet" href="../css/footer.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!--GOOGLE FONTS-->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
    <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
    <title>Inicio - Yalle</title>
 </head>
@@ -69,6 +76,11 @@
       </div>
 
    </section>
+
+   <div w3-include-html="footer.php"></div>
+      <script>
+         w3.includeHTML();
+      </script>
 
    <script src="../js/livro.js"></script>
 </body>
