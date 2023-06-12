@@ -298,18 +298,8 @@ if ($nivel['admin'] != 1) {
             </div>
 
             <div class="relatorioDiv">
-               <p class="">Relatório de produtos cadastrados</p>
-               <button type="submit" name="userRelatorios" class="user">Gerar pdf</button>
-            </div>
-
-            <div class="relatorioDiv">
-               <p class="">Relatório de autores cadastrados</p>
-               <button type="submit" name="userRelatorios" class="user">Gerar pdf</button>
-            </div>
-
-            <div class="relatorioDiv">
-               <p class="">Relatório de vendas</p>
-               <button type="submit" name="userRelatorios" class="user">Gerar pdf</button>
+               <p class="">Relatório de vendas cadastradas</p>
+               <a href="../relatorios/geradorPdfVendas.php" target="_blank"><button type="submit" name="userRelatorios" class="user">Gerar pdf</button></a>
             </div>
          </section>
       </main>
